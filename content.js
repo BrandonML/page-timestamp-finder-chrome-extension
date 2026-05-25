@@ -7,27 +7,29 @@ function findDate(dateString) {
     const now = new Date();
     const futureThreshold = new Date(now.getTime() + 24 * 60 * 60 * 1000); // 24-hour buffer
 
+    function validateDate(parsedDate) {
+        if (!isNaN(parsedDate)) {
+            if (parsedDate > futureThreshold) return null;
+            return parsedDate;
+        }
+        return undefined;
+    }
+
     // Try Unix timestamp (10 digits for seconds, 13 for milliseconds)
     if (/^\d{10}$/.test(dateString)) {
         let parsedDate = new Date(parseInt(dateString) * 1000);
-        if (!isNaN(parsedDate)) {
-            if (parsedDate > futureThreshold) return null;
-            return parsedDate;
-        }
+        let validDate = validateDate(parsedDate);
+        if (validDate !== undefined) return validDate;
     } else if (/^\d{13}$/.test(dateString)) {
         let parsedDate = new Date(parseInt(dateString));
-        if (!isNaN(parsedDate)) {
-            if (parsedDate > futureThreshold) return null;
-            return parsedDate;
-        }
+        let validDate = validateDate(parsedDate);
+        if (validDate !== undefined) return validDate;
     }
 
     // Try ISO and standard JS Date parsing
     let parsedDate = new Date(dateString);
-    if (!isNaN(parsedDate)) {
-        if (parsedDate > futureThreshold) return null; // Reject future dates
-        return parsedDate;
-    }
+    let validDate = validateDate(parsedDate);
+    if (validDate !== undefined) return validDate;
 
     // Try relative dates like "2 days ago"
     const relativeMatch = dateString.toLowerCase().match(/^(\d+)\s+(second|minute|hour|day|week|month|year)s?\s+ago$/);
@@ -51,13 +53,13 @@ function findDate(dateString) {
     return null;
 }
 
-async function formatDate(dateString) {
+async function formatDate(dateString, preFetchedSettings = null) {
     if (!dateString) return null;
     try {
         const date = findDate(dateString);
         if (!date) return dateString;
 
-        const settings = await new Promise(resolve => {
+        const settings = preFetchedSettings || await new Promise(resolve => {
             chrome.storage.sync.get({
                 dateFormat: 'YYYY-MM-DD',
                 timeFormat: '24-hour'
@@ -113,6 +115,7 @@ function findStructuredData() {
             const sanitizedContent = script.textContent.replace(/[\u0000-\u001F]/g, ' ');
             const data = JSON.parse(sanitizedContent);
             processStructuredData(data, results);
+            if (results.modified && results.published) break;
         } catch (e) {
             console.error('Error parsing structured data:', e);
         }
@@ -151,6 +154,13 @@ function processStructuredData(data, results) {
 window.findTimestamps = async function () {
     let modifiedTimestamp = null, publishedTimestamp = null;
     let modifiedSource = null, publishedSource = null;
+
+    const settings = await new Promise(resolve => {
+        chrome.storage.sync.get({
+            dateFormat: 'YYYY-MM-DD',
+            timeFormat: '24-hour'
+        }, items => resolve(items));
+    });
 
     // Create overlay element
     let overlay = document.getElementById('last-modified-overlay');
@@ -210,6 +220,7 @@ window.findTimestamps = async function () {
                     publishedSource = 'Meta Property';
                 }
             }
+            if (modifiedTimestamp && publishedTimestamp) break;
         }
     }
 
@@ -233,6 +244,7 @@ window.findTimestamps = async function () {
                 publishedTimestamp = timestamp;
                 publishedSource = 'Page Content (time tag)';
             }
+            if (modifiedTimestamp && publishedTimestamp) break;
         }
     }
 
@@ -266,7 +278,7 @@ window.findTimestamps = async function () {
 
         // Regex scan for dates
         if (!modifiedTimestamp || !publishedTimestamp) {
-            const bodyText = document.body.innerText || document.body.textContent;
+            const bodyText = document.body.textContent;
             // Matches something like "Published: Jan 1, 2023" or "Updated on 2023-01-01"
             const dateRegex = /(?:published|posted|updated|modified)(?:\s+on|\s*:)?\s*([a-zA-Z]+\s+\d{1,2},?\s+\d{4}|\d{4}-\d{2}-\d{2}|\d{1,2}\/\d{1,2}\/\d{4})/gi;
 
@@ -303,7 +315,7 @@ window.findTimestamps = async function () {
         }
     }
 
-    await displayTimestamps(overlay, publishedTimestamp, publishedSource, modifiedTimestamp, modifiedSource);
+    await displayTimestamps(overlay, publishedTimestamp, publishedSource, modifiedTimestamp, modifiedSource, settings);
 };
 
 function removeOverlay(overlayElement) {
@@ -317,9 +329,9 @@ function removeOverlay(overlayElement) {
     }, 5000);
 }
 
-async function displayTimestamps(overlayElement, publishedTimestamp, publishedSource, modifiedTimestamp, modifiedSource) {
+async function displayTimestamps(overlayElement, publishedTimestamp, publishedSource, modifiedTimestamp, modifiedSource, settings = null) {
     if (publishedTimestamp || modifiedTimestamp) {
-        await displayTimestamp(publishedTimestamp, publishedSource, modifiedTimestamp, modifiedSource, overlayElement);
+        await displayTimestamp(publishedTimestamp, publishedSource, modifiedTimestamp, modifiedSource, overlayElement, settings);
     } else {
         overlayElement.textContent = 'No reliable timestamp found';
         overlayElement.style.backgroundColor = 'rgba(244, 67, 54, 0.9)';
@@ -328,7 +340,7 @@ async function displayTimestamps(overlayElement, publishedTimestamp, publishedSo
     }
 }
 
-async function displayTimestamp(pubDate, pubSource, modDate, modSource, overlayElement) {
+async function displayTimestamp(pubDate, pubSource, modDate, modSource, overlayElement, settings = null) {
     overlayElement.textContent = ''; // Clear previous content
 
     const createSection = async (label, date, source) => {
@@ -338,7 +350,7 @@ async function displayTimestamp(pubDate, pubSource, modDate, modSource, overlayE
         container.appendChild(strong);
         container.appendChild(document.createElement('br'));
 
-        const formattedDate = await formatDate(date);
+        const formattedDate = await formatDate(date, settings);
         if (formattedDate) {
             container.appendChild(document.createTextNode(formattedDate));
             container.appendChild(document.createElement('br'));

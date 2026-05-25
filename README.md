@@ -1,10 +1,8 @@
 # Page Timestamp Finder
 
-> <strong>Published in [Chrome Web Store](https://chromewebstore.google.com/detail/last-modified-timestamp/ilahbmmcmhcpjpfcgodgijbjadadicmg?pli=1)</strong>: 4/7/2025.
->
-> <strong>v1.2.0 Released</strong>: 3/17/2026.
+> <strong>Published in [Chrome Web Store](https://chromewebstore.google.com/detail/page-timestamp-finder/ilahbmmcmhcpjpfcgodgijbjadadicmg?pli=1)</strong>: 4/7/2025.
 
-Tired of hunting around for when a webpage was published or last updated? This [Chrome extension](https://chromewebstore.google.com/detail/last-modified-timestamp/ilahbmmcmhcpjpfcgodgijbjadadicmg?pli=1) has you covered!
+Tired of hunting around for when a webpage was published or last updated? This [Chrome extension](https://chromewebstore.google.com/detail/page-timestamp-finder/ilahbmmcmhcpjpfcgodgijbjadadicmg?pli=1) has you covered!
 
 **The Goal:** To surface the most reliable **published** and **last modified** timestamps of any webpage, even if they're not explicitly displayed. We dig deep so you don't have to!
 
@@ -40,6 +38,6 @@ You can customize the date and time format to match your preference.
 
 ## To Use
 
-Simply [install the extension](https://chromewebstore.google.com/detail/last-modified-timestamp/ilahbmmcmhcpjpfcgodgijbjadadicmg?pli=1). When you're on a webpage and want to know the timestamps, just **click the extension icon**. You'll need to click the icon each time you want to check a page.
+Simply [install the extension](https://chromewebstore.google.com/detail/page-timestamp-finder/ilahbmmcmhcpjpfcgodgijbjadadicmg?pli=1). When you're on a webpage and want to know the timestamps, just **click the extension icon**. You'll need to click the icon each time you want to check a page.
 
 Let us know if you have any feedback or suggestions!

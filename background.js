@@ -1,4 +1,15 @@
 // background.js - Background service worker
+
+function sanitizeUrl(urlString) {
+    if (!urlString) return urlString;
+    try {
+        const urlObj = new URL(urlString);
+        return urlObj.origin + urlObj.pathname;
+    } catch (e) {
+        return 'invalid-url';
+    }
+}
+
 // Open onboarding page on install
 chrome.runtime.onInstalled.addListener((details) => {
     if (details.reason === 'install') {
@@ -48,8 +59,8 @@ chrome.action.onClicked.addListener(async (tab) => {
     } catch (error) {
         console.warn('Unsupported page for extension action: invalid or missing URL.', {
             tabId,
-            url,
-            error
+            url: sanitizeUrl(url),
+            error: error.message
         });
         return;
     }
@@ -57,7 +68,7 @@ chrome.action.onClicked.addListener(async (tab) => {
     if (!tabId || (protocol !== 'http:' && protocol !== 'https:')) {
         console.warn('Unsupported page for extension action: only http/https tabs with valid IDs are supported.', {
             tabId,
-            url,
+            url: sanitizeUrl(url),
             protocol
         });
         return;
@@ -87,7 +98,7 @@ chrome.action.onClicked.addListener(async (tab) => {
 });
 
 // Listen for messages from content script
-chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+chrome.runtime.onMessage.addListener((message, sender) => {
     const tabId = sender.tab.id;
     if (message.published || message.modified) {
         updateTimestampState(tabId, message);
