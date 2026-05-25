@@ -189,6 +189,40 @@ describe('Priority Hierarchy Validation', () => {
         expect(overlay.style.zIndex).toBe('2147483647');
     });
 
+    test('processStructuredData correctly handles nested JSON objects', () => {
+        const results = { modified: null, published: null };
+        const data = {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "WebPage",
+                    "datePublished": "2023-01-01T00:00:00Z"
+                },
+                {
+                    "@type": "Article",
+                    "dateModified": "2023-01-02T00:00:00Z"
+                }
+            ]
+        };
+
+        contentModule.processStructuredData(data, results);
+        expect(results.published).toBe("2023-01-01T00:00:00Z");
+        expect(results.modified).toBe("2023-01-02T00:00:00Z");
+    });
+
+    test('HTTP header fallback catches network errors without crashing', async () => {
+        global.fetch.mockImplementationOnce(() => Promise.reject(new Error('Network error')));
+        const spy = jest.spyOn(console, 'error').mockImplementation(() => {});
+
+        document.body.innerHTML = '';
+        document.head.innerHTML = '';
+
+        await window.findTimestamps();
+
+        expect(spy).toHaveBeenCalledWith('Error checking HTTP headers:', expect.any(Error));
+        spy.mockRestore();
+    });
+
     test('findStructuredData handles JSON with bad control characters', async () => {
         // Mock console.error to avoid noise in test output
         const spy = jest.spyOn(console, 'error').mockImplementation(() => {});
