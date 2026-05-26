@@ -107,7 +107,7 @@ async function formatDate(dateString, preFetchedSettings = null) {
 
 function findStructuredData() {
     const scripts = document.querySelectorAll('script[type="application/ld+json"]');
-    let results = { modified: null, published: null, type: null };
+    let results = { modified: null, published: null, created: null, type: null };
     for (const script of scripts) {
         try {
             // Sanitize script content by replacing unescaped control characters (ASCII 0-31) with spaces
@@ -115,10 +115,13 @@ function findStructuredData() {
             const sanitizedContent = script.textContent.replace(/[\u0000-\u001F]/g, ' ');
             const data = JSON.parse(sanitizedContent);
             processStructuredData(data, results);
-            if (results.modified && results.published) break;
+            if (results.modified && (results.published || results.created)) break;
         } catch (e) {
             console.error('Error parsing structured data:', e);
         }
+    }
+    if (!results.published && results.created) {
+        results.published = results.created;
     }
     return results.modified || results.published ? results : null;
 }
@@ -140,6 +143,9 @@ function processStructuredData(data, results) {
         }
         if (data.datePublished && !results.published) {
             results.published = data.datePublished;
+        }
+        if (data.dateCreated && !results.created) {
+            results.created = data.dateCreated;
         }
     }
 
