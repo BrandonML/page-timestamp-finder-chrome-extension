@@ -190,7 +190,7 @@ describe('Priority Hierarchy Validation', () => {
     });
 
     test('processStructuredData correctly handles nested JSON objects', () => {
-        const results = { modified: null, published: null };
+        const results = { modified: null, published: null, created: null };
         const data = {
             "@context": "https://schema.org",
             "@graph": [
@@ -208,6 +208,51 @@ describe('Priority Hierarchy Validation', () => {
         contentModule.processStructuredData(data, results);
         expect(results.published).toBe("2023-01-01T00:00:00Z");
         expect(results.modified).toBe("2023-01-02T00:00:00Z");
+    });
+
+    test('findStructuredData uses dateCreated if datePublished is missing', async () => {
+        document.head.innerHTML = `
+            <script type="application/ld+json">
+                {
+                    "@context": "https://schema.org",
+                    "@type": "QAPage",
+                    "dateCreated": "2026-05-11T18:54:24.404Z",
+                    "dateModified": "2026-05-12T18:54:24.404Z"
+                }
+            </script>
+        `;
+
+        await window.findTimestamps();
+
+        expect(global.chrome.runtime.sendMessage).toHaveBeenCalledWith(
+            expect.objectContaining({
+                published: "2026-05-11T18:54:24.404Z",
+                modified: "2026-05-12T18:54:24.404Z"
+            })
+        );
+    });
+
+    test('findStructuredData prioritizes datePublished over dateCreated', async () => {
+        document.head.innerHTML = `
+            <script type="application/ld+json">
+                {
+                    "@context": "https://schema.org",
+                    "@type": "Article",
+                    "datePublished": "2025-01-01T00:00:00Z",
+                    "dateCreated": "2024-01-01T00:00:00Z",
+                    "dateModified": "2025-01-02T00:00:00Z"
+                }
+            </script>
+        `;
+
+        await window.findTimestamps();
+
+        expect(global.chrome.runtime.sendMessage).toHaveBeenCalledWith(
+            expect.objectContaining({
+                published: "2025-01-01T00:00:00Z",
+                modified: "2025-01-02T00:00:00Z"
+            })
+        );
     });
 
     test('HTTP header fallback catches network errors without crashing', async () => {
