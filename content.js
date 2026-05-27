@@ -126,35 +126,35 @@ function findStructuredData() {
     return results.modified || results.published ? results : null;
 }
 
-function processStructuredData(data, results) {
+function processStructuredData(data, results, parentType = null) {
     if (Array.isArray(data)) {
         for (const item of data) {
-            processStructuredData(item, results);
+            processStructuredData(item, results, parentType);
         }
         return;
     }
     if (!data || typeof data !== 'object') return;
 
-    let currentType = null;
+    let currentType = parentType;
     if (data['@type']) {
         currentType = Array.isArray(data['@type']) ? data['@type'][0] : data['@type'];
         const typeLower = typeof currentType === 'string' ? currentType.toLowerCase() : '';
         if (['review', 'userreview', 'comment', 'usercomments'].includes(typeLower)) {
             return;
         }
+    }
 
-        if (data.dateModified && !results.modified) {
-            results.modified = data.dateModified;
-            results.modifiedType = currentType;
-        }
-        if (data.datePublished && !results.published) {
-            results.published = data.datePublished;
-            results.publishedType = currentType;
-        }
-        if (data.dateCreated && !results.created) {
-            results.created = data.dateCreated;
-            results.createdType = currentType;
-        }
+    if (data.dateModified && !results.modified) {
+        results.modified = data.dateModified;
+        results.modifiedType = currentType;
+    }
+    if (data.datePublished && !results.published) {
+        results.published = data.datePublished;
+        results.publishedType = currentType;
+    }
+    if (data.dateCreated && !results.created) {
+        results.created = data.dateCreated;
+        results.createdType = currentType;
     }
 
     for (const key in data) {
@@ -164,7 +164,7 @@ function processStructuredData(data, results) {
         }
 
         if (typeof data[key] === 'object' && data[key] !== null) {
-            processStructuredData(data[key], results);
+            processStructuredData(data[key], results, currentType);
         }
     }
 }
@@ -208,11 +208,11 @@ window.findTimestamps = async function () {
     if (structuredData) {
         if (structuredData.modified) {
             modifiedTimestamp = structuredData.modified;
-            modifiedSource = `${chrome.i18n.getMessage("sourceSchema")} (${structuredData.modifiedType || 'Unknown'})`;
+            modifiedSource = `${chrome.i18n.getMessage("sourceSchema")} (${structuredData.modifiedType || chrome.i18n.getMessage("unknownSchema") || 'Unknown'})`;
         }
         if (structuredData.published) {
             publishedTimestamp = structuredData.published;
-            publishedSource = `${chrome.i18n.getMessage("sourceSchema")} (${structuredData.publishedType || 'Unknown'})`;
+            publishedSource = `${chrome.i18n.getMessage("sourceSchema")} (${structuredData.publishedType || chrome.i18n.getMessage("unknownSchema") || 'Unknown'})`;
         }
     }
 

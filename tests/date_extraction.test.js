@@ -217,6 +217,22 @@ describe('Priority Hierarchy Validation', () => {
         expect(results.modifiedType).toBe("Article");
     });
 
+    test('processStructuredData attributes untyped nested timestamps to their parent @type', () => {
+        const results = { modified: null, published: null, created: null, modifiedType: null, publishedType: null, createdType: null };
+        const data = {
+            "@context": "https://schema.org",
+            "@type": "QAPage",
+            "mainEntity": {
+                // Notice there is no @type here
+                "datePublished": "2023-05-01T00:00:00Z"
+            }
+        };
+
+        contentModule.processStructuredData(data, results);
+        expect(results.published).toBe("2023-05-01T00:00:00Z");
+        expect(results.publishedType).toBe("QAPage"); // Inherited from the parent QAPage
+    });
+
     test('processStructuredData ignores excluded types and keys (Review, Comment)', () => {
         const results = { modified: null, published: null, created: null, modifiedType: null, publishedType: null, createdType: null };
         const data = {
