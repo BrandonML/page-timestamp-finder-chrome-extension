@@ -1,230 +1,230 @@
 {
   "extName": {
-    "message": "[hi] Page Timestamp Finder"
+    "message": "पृष्ठ टाइमस्टैम्प खोजक"
   },
   "extDesc": {
-    "message": "[hi] Finds and displays the published and modified/updated timestamp of a webpage"
+    "message": "किसी वेबपेज के प्रकाशित और संशोधित टाइमस्टैम्प को ढूंढता और प्रदर्शित करता है"
   },
   "publishedLabel": {
-    "message": "[hi] Published:"
+    "message": "प्रकाशित:"
   },
   "modifiedLabel": {
-    "message": "[hi] Last Modified:"
+    "message": "अंतिम संशोधित:"
   },
   "notFound": {
-    "message": "[hi] Not found"
+    "message": "नहीं मिला"
   },
   "noTimestampFound": {
-    "message": "[hi] No reliable timestamp found"
+    "message": "कोई विश्वसनीय टाइमस्टैम्प नहीं मिला"
   },
   "sourceSchema": {
-    "message": "[hi] Schema.org"
+    "message": "Schema.org"
   },
   "sourceMeta": {
-    "message": "[hi] Meta Tag"
+    "message": "मेटा टैग"
   },
   "sourceMetaProp": {
-    "message": "[hi] Meta Property"
+    "message": "मेटा प्रॉपर्टी"
   },
   "sourceTimeTag": {
-    "message": "[hi] Page Content (time tag)"
+    "message": "पृष्ठ सामग्री (समय टैग)"
   },
   "sourceContent": {
-    "message": "[hi] Page Content"
+    "message": "पृष्ठ सामग्री"
   },
   "sourceUrl": {
-    "message": "[hi] URL Pattern"
+    "message": "URL पैटर्न"
   },
   "sourceRegex": {
-    "message": "[hi] Regex Scan"
+    "message": "रेगेक्स स्कैन"
   },
   "sourceHttp": {
-    "message": "[hi] HTTP Header"
+    "message": "HTTP हैडर"
   },
   "optionsTitle": {
-    "message": "[hi] Timestamp Format Options"
+    "message": "टाइमस्टैम्प प्रारूप विकल्प"
   },
   "dateFormatLabel": {
-    "message": "[hi] Date Format:"
+    "message": "दिनांक प्रारूप:"
   },
   "timeFormatLabel": {
-    "message": "[hi] Time Format:"
+    "message": "समय प्रारूप:"
   },
   "saveButton": {
-    "message": "[hi] Save"
+    "message": "सहेजें"
   },
   "optionsSaved": {
-    "message": "[hi] Options saved."
+    "message": "विकल्प सहेजे गए।"
   },
   "option24Hour": {
-    "message": "[hi] 24-hour"
+    "message": "24-घंटे"
   },
   "option12Hour": {
-    "message": "[hi] 12-hour"
+    "message": "12-घंटे"
   },
   "optionISO": {
-    "message": "[hi] YYYY-MM-DD (ISO)"
+    "message": "YYYY-MM-DD (ISO)"
   },
   "onboardingTitle": {
-    "message": "[hi] Welcome to Page Timestamp Finder"
+    "message": "पृष्ठ टाइमस्टैम्प खोजक में आपका स्वागत है"
   },
   "onboardingSubtitle": {
-    "message": "[hi] Track when web pages were published or last updated with this simple, powerful extension."
+    "message": "इस एक्सटेंशन के साथ ट्रैक करें कि वेब पेज कब प्रकाशित या अपडेट किए गए थे।"
   },
   "introTitle": {
-    "message": "[hi] Why We Built This Extension"
+    "message": "हमने यह एक्सटेंशन क्यों बनाया"
   },
   "introP1": {
-    "message": "[hi] Don't you hate it when you're on a webpage and you're unsure if the information is new or old?"
+    "message": "क्या आपको यह बुरा नहीं लगता जब आप किसी वेबपेज पर होते हैं और आप अनिश्चित होते हैं कि जानकारी नई है या पुरानी?"
   },
   "introP2": {
-    "message": "[hi] Sadly, few websites clearly display when their content was published or last updated. This can be frustrating when you need to know if you're looking at current information."
+    "message": "दुर्भाग्य से, बहुत कम वेबसाइटें स्पष्ट रूप से प्रदर्शित करती हैं कि उनकी सामग्री कब प्रकाशित या अपडेट की गई थी।"
   },
   "introP3_1": {
-    "message": "[hi] Page Timestamp Finder solves this problem by finding both the "
+    "message": "पृष्ठ टाइमस्टैम्प खोजक एक पृष्ठ की "
   },
   "publishedBold": {
-    "message": "[hi] published"
+    "message": "प्रकाशित"
   },
   "introP3_2": {
-    "message": "[hi]  and "
+    "message": " और "
   },
   "modifiedBold": {
-    "message": "[hi] last modified"
+    "message": "अंतिम संशोधित"
   },
   "introP3_3": {
-    "message": "[hi]  dates of a page. Simply click the extension icon to find out, giving you confidence in the content you're reading."
+    "message": " दोनों तिथियों को ढूंढकर इस समस्या को हल करता है।"
   },
   "highlightText": {
-    "message": "[hi] For the best experience, we recommend pinning this extension to your toolbar for easy access."
+    "message": "सर्वोत्तम अनुभव के लिए, हम आसान पहुंच के लिए इस एक्सटेंशन को आपके टूलबार में पिन करने की सलाह देते हैं।"
   },
   "step1Title": {
-    "message": "[hi] Pin Page Timestamp Finder to your toolbar"
+    "message": "पृष्ठ टाइमस्टैम्प खोजक को पिन करें"
   },
   "step1Desc": {
-    "message": "[hi] Click the pin icon next to our extension to keep it visible at all times."
+    "message": "हमारे एक्सटेंशन के बगल में पिन आइकन पर क्लिक करें।"
   },
   "step1Caption": {
-    "message": "[hi] Pinning gives you quick access to the extension's features from any webpage."
+    "message": "पिन करने से आपको त्वरित पहुंच मिलती है।"
   },
   "step2Title": {
-    "message": "[hi] Click the extension icon"
+    "message": "एक्सटेंशन आइकन पर क्लिक करें"
   },
   "step2Desc": {
-    "message": "[hi] To find the timestamp for a page, just click the extension icon. The extension finds both \"published\" and \"modified\" dates."
+    "message": "पृष्ठ के लिए टाइमस्टैम्प खोजने के लिए, बस एक्सटेंशन आइकन पर क्लिक करें।"
   },
   "step2Caption": {
-    "message": "[hi] When timestamps are available you'll see the details in an overlay in the right corner."
+    "message": "दाएं कोने में एक ओवरले में विवरण दिखाई देगा।"
   },
   "step3Title": {
-    "message": "[hi] Customize your experience"
+    "message": "अपना अनुभव कस्टमाइज़ करें"
   },
   "step3Desc": {
-    "message": "[hi] You can set your preferred date and time format. Right-click the extension icon, select \"Options\", and choose the format that works best for you."
+    "message": "आप 'विकल्प' में अपना पसंदीदा दिनांक और समय प्रारूप सेट कर सकते हैं।"
   },
   "howItWorksTitle": {
-    "message": "[hi] How the Extension Works"
+    "message": "एक्सटेंशन कैसे काम करता है"
   },
   "howItWorksDesc_1": {
-    "message": "[hi] We intelligently scan the webpage for both "
+    "message": "हम वेबपेज को "
   },
   "howItWorksDesc_2": {
-    "message": "[hi]  timestamps, checking various locations where a date might be hiding. Our approach follows a logical sequence, prioritizing the most reliable sources first:"
+    "message": " टाइमस्टैम्प के लिए स्कैन करते हैं, सबसे विश्वसनीय स्रोतों को प्राथमिकता देते हैं:"
   },
   "logic1Title": {
-    "message": "[hi] Schema.org Structured Data"
+    "message": "Schema.org संरचित डेटा"
   },
   "logic1Desc_1": {
-    "message": "[hi] First, we analyze any "
+    "message": "सबसे पहले, हम किसी भी "
   },
   "schemaLinkText": {
-    "message": "[hi] Schema.org"
+    "message": "Schema.org"
   },
   "logic1Desc_2": {
-    "message": "[hi]  structured data (in JSON-LD or microdata format) embedded in the page. This often contains the most accurate "
+    "message": " संरचित डेटा का विश्लेषण करते हैं। इसमें "
   },
   "logic1Desc_3": {
-    "message": "[hi]  (or "
+    "message": " (या "
   },
   "logic1Desc_4": {
-    "message": "[hi]  as a fallback) and "
+    "message": " ) और "
   },
   "logic1Desc_5": {
-    "message": "[hi]  properties directly from the author. Content is securely sanitized to handle malformed control characters."
+    "message": " गुण शामिल हैं।"
   },
   "logic2Title": {
-    "message": "[hi] Meta Tags"
+    "message": "मेटा टैग"
   },
   "logic2Desc_1": {
-    "message": "[hi] Next, we look for direct indicators in the page's meta tags. This includes standard tags like "
+    "message": "इसके बाद, हम मेटा टैग में संकेतक ढूंढते हैं, जैसे "
   },
   "logic2Desc_2": {
-    "message": "[hi]  as well as "
+    "message": " और "
   },
   "ogLinkText": {
-    "message": "[hi] Open Graph (OG)"
+    "message": "ओपन ग्राफ (OG)"
   },
   "logic2Desc_3": {
-    "message": "[hi]  tags like "
+    "message": " टैग जैसे "
   },
   "logic2Desc_4": {
-    "message": "[hi]  (for modified) and "
+    "message": " (संशोधित के लिए) और "
   },
   "logic2Desc_5": {
-    "message": "[hi]  (for published)."
+    "message": " (प्रकाशित के लिए)।"
   },
   "logic3Title": {
-    "message": "[hi] HTML Content Patterns"
+    "message": "HTML सामग्री पैटर्न"
   },
   "logic3Desc_1": {
-    "message": "[hi] If the above checks don't yield a result, we start looking at the visible content of the page. We search for HTML5 "
+    "message": "हम HTML5 "
   },
   "logic3Desc_2": {
-    "message": "[hi]  elements and common phrases or CSS classes (like "
+    "message": " तत्वों और सामान्य वाक्यांशों या CSS वर्गों (जैसे "
   },
   "logic3Desc_3": {
-    "message": "[hi]  or "
+    "message": " या "
   },
   "logic3Desc_4": {
-    "message": "[hi] ) that often indicate dates."
+    "message": ") की खोज करते हैं जो तिथियों को दर्शाते हैं।"
   },
   "logic4Title": {
-    "message": "[hi] URL Patterns"
+    "message": "URL पैटर्न"
   },
   "logic4Desc_1": {
-    "message": "[hi] If a publication date still hasn't been found, we scan the website's address (URL) for common date patterns (like "
+    "message": "हम वेबसाइट के पते (URL) को सामान्य दिनांक पैटर्न (जैसे "
   },
   "logic4Desc_2": {
-    "message": "[hi] ) often used by blogs and news sites."
+    "message": ") के लिए स्कैन करते हैं।"
   },
   "logic5Title": {
-    "message": "[hi] Unix Timestamp Parsing"
+    "message": "Unix टाइमस्टैम्प पार्सिंग"
   },
   "logic5Desc": {
-    "message": "[hi] Supports scanning structured elements and page content for both 10-digit (seconds) and 13-digit (milliseconds) Unix timestamps."
+    "message": "10-अंकीय और 13-अंकीय Unix टाइमस्टैम्प के लिए स्कैनिंग का समर्थन करता है।"
   },
   "logic6Title": {
-    "message": "[hi] HTTP Last-Modified Header"
+    "message": "HTTP Last-Modified हैडर"
   },
   "logic6Desc_1": {
-    "message": "[hi] As a final fallback for the "
+    "message": "As a final fallback for the "
   },
   "modifiedItalic": {
-    "message": "[hi] modified"
+    "message": "संशोधित"
   },
   "logic6Desc_2": {
-    "message": "[hi]  date, we examine the "
+    "message": " तिथि के अंतिम विकल्प के रूप में, हम वेब सर्वर द्वारा भेजे गए "
   },
   "logic6Desc_3": {
-    "message": "[hi]  header sent by the web server. While this can sometimes be less precise, it can still provide a useful indication."
+    "message": " हैडर की जांच करते हैं।"
   },
   "notePrefix": {
-    "message": "[hi] Note:"
+    "message": "नोट:"
   },
   "noteText": {
-    "message": "[hi]  We deliberately ignore some generic server headers and the system's \"current time\" to prevent incorrect publication dates. We also reject dates that appear to be in the future."
+    "message": " हम गलत प्रकाशन तिथियों को रोकने के लिए सिस्टम के 'वर्तमान समय' को अनदेखा करते हैं और भविष्य की तिथियों को अस्वीकार करते हैं।"
   },
   "footerText1": {
-    "message": "[hi] Page Timestamp Finder • By Brandon Scivolette • "
+    "message": "पृष्ठ टाइमस्टैम्प खोजक • ब्रैंडन स्सिवोलेट द्वारा • "
   }
 }

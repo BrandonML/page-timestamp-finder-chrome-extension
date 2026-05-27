@@ -1,230 +1,230 @@
 {
   "extName": {
-    "message": "[zh_CN] Page Timestamp Finder"
+    "message": "页面时间戳查找器"
   },
   "extDesc": {
-    "message": "[zh_CN] Finds and displays the published and modified/updated timestamp of a webpage"
+    "message": "查找并显示网页的发布和修改/更新时间戳"
   },
   "publishedLabel": {
-    "message": "[zh_CN] Published:"
+    "message": "发布时间:"
   },
   "modifiedLabel": {
-    "message": "[zh_CN] Last Modified:"
+    "message": "最后修改:"
   },
   "notFound": {
-    "message": "[zh_CN] Not found"
+    "message": "未找到"
   },
   "noTimestampFound": {
-    "message": "[zh_CN] No reliable timestamp found"
+    "message": "未找到可靠的时间戳"
   },
   "sourceSchema": {
-    "message": "[zh_CN] Schema.org"
+    "message": "Schema.org"
   },
   "sourceMeta": {
-    "message": "[zh_CN] Meta Tag"
+    "message": "元标签"
   },
   "sourceMetaProp": {
-    "message": "[zh_CN] Meta Property"
+    "message": "元属性"
   },
   "sourceTimeTag": {
-    "message": "[zh_CN] Page Content (time tag)"
+    "message": "页面内容 (time标签)"
   },
   "sourceContent": {
-    "message": "[zh_CN] Page Content"
+    "message": "页面内容"
   },
   "sourceUrl": {
-    "message": "[zh_CN] URL Pattern"
+    "message": "URL模式"
   },
   "sourceRegex": {
-    "message": "[zh_CN] Regex Scan"
+    "message": "正则扫描"
   },
   "sourceHttp": {
-    "message": "[zh_CN] HTTP Header"
+    "message": "HTTP头部"
   },
   "optionsTitle": {
-    "message": "[zh_CN] Timestamp Format Options"
+    "message": "时间戳格式选项"
   },
   "dateFormatLabel": {
-    "message": "[zh_CN] Date Format:"
+    "message": "日期格式:"
   },
   "timeFormatLabel": {
-    "message": "[zh_CN] Time Format:"
+    "message": "时间格式:"
   },
   "saveButton": {
-    "message": "[zh_CN] Save"
+    "message": "保存"
   },
   "optionsSaved": {
-    "message": "[zh_CN] Options saved."
+    "message": "选项已保存。"
   },
   "option24Hour": {
-    "message": "[zh_CN] 24-hour"
+    "message": "24小时制"
   },
   "option12Hour": {
-    "message": "[zh_CN] 12-hour"
+    "message": "12小时制"
   },
   "optionISO": {
-    "message": "[zh_CN] YYYY-MM-DD (ISO)"
+    "message": "YYYY-MM-DD (ISO)"
   },
   "onboardingTitle": {
-    "message": "[zh_CN] Welcome to Page Timestamp Finder"
+    "message": "欢迎使用页面时间戳查找器"
   },
   "onboardingSubtitle": {
-    "message": "[zh_CN] Track when web pages were published or last updated with this simple, powerful extension."
+    "message": "使用这个简单而强大的扩展程序，追踪网页的发布或最后更新时间。"
   },
   "introTitle": {
-    "message": "[zh_CN] Why We Built This Extension"
+    "message": "我们为什么制作这个扩展程序"
   },
   "introP1": {
-    "message": "[zh_CN] Don't you hate it when you're on a webpage and you're unsure if the information is new or old?"
+    "message": "当您在一个网页上，却不确定信息是新的还是旧的，这不是让人很讨厌吗？"
   },
   "introP2": {
-    "message": "[zh_CN] Sadly, few websites clearly display when their content was published or last updated. This can be frustrating when you need to know if you're looking at current information."
+    "message": "遗憾的是，很少有网站清晰地显示其内容的发布或最后更新时间。当您需要知道所看信息是否最新时，这可能会令人沮丧。"
   },
   "introP3_1": {
-    "message": "[zh_CN] Page Timestamp Finder solves this problem by finding both the "
+    "message": "页面时间戳查找器通过查找页面的"
   },
   "publishedBold": {
-    "message": "[zh_CN] published"
+    "message": "发布"
   },
   "introP3_2": {
-    "message": "[zh_CN]  and "
+    "message": "和"
   },
   "modifiedBold": {
-    "message": "[zh_CN] last modified"
+    "message": "最后修改"
   },
   "introP3_3": {
-    "message": "[zh_CN]  dates of a page. Simply click the extension icon to find out, giving you confidence in the content you're reading."
+    "message": "时间来解决这个问题。只需点击扩展程序图标即可查明，让您对阅读的内容充满信心。"
   },
   "highlightText": {
-    "message": "[zh_CN] For the best experience, we recommend pinning this extension to your toolbar for easy access."
+    "message": "为了获得最佳体验，我们建议将此扩展程序固定在您的工具栏上，以便快速访问。"
   },
   "step1Title": {
-    "message": "[zh_CN] Pin Page Timestamp Finder to your toolbar"
+    "message": "将页面时间戳查找器固定到您的工具栏"
   },
   "step1Desc": {
-    "message": "[zh_CN] Click the pin icon next to our extension to keep it visible at all times."
+    "message": "点击我们扩展程序旁边的图钉图标，使其始终可见。"
   },
   "step1Caption": {
-    "message": "[zh_CN] Pinning gives you quick access to the extension's features from any webpage."
+    "message": "固定后，您可以从任何网页快速访问扩展程序的功能。"
   },
   "step2Title": {
-    "message": "[zh_CN] Click the extension icon"
+    "message": "点击扩展程序图标"
   },
   "step2Desc": {
-    "message": "[zh_CN] To find the timestamp for a page, just click the extension icon. The extension finds both \"published\" and \"modified\" dates."
+    "message": "要查找页面的时间戳，只需点击扩展程序图标。该扩展程序会查找“发布”和“修改”日期。"
   },
   "step2Caption": {
-    "message": "[zh_CN] When timestamps are available you'll see the details in an overlay in the right corner."
+    "message": "当有可用的时间戳时，您会在右上角的叠加层中看到详细信息。"
   },
   "step3Title": {
-    "message": "[zh_CN] Customize your experience"
+    "message": "自定义您的体验"
   },
   "step3Desc": {
-    "message": "[zh_CN] You can set your preferred date and time format. Right-click the extension icon, select \"Options\", and choose the format that works best for you."
+    "message": "您可以设置首选的日期和时间格式。右键单击扩展程序图标，选择“选项”，然后选择最适合您的格式。"
   },
   "howItWorksTitle": {
-    "message": "[zh_CN] How the Extension Works"
+    "message": "扩展程序如何工作"
   },
   "howItWorksDesc_1": {
-    "message": "[zh_CN] We intelligently scan the webpage for both "
+    "message": "我们智能地扫描网页以查找"
   },
   "howItWorksDesc_2": {
-    "message": "[zh_CN]  timestamps, checking various locations where a date might be hiding. Our approach follows a logical sequence, prioritizing the most reliable sources first:"
+    "message": "时间戳，检查可能隐藏日期的各个位置。我们的方法遵循逻辑顺序，优先考虑最可靠的来源："
   },
   "logic1Title": {
-    "message": "[zh_CN] Schema.org Structured Data"
+    "message": "Schema.org 结构化数据"
   },
   "logic1Desc_1": {
-    "message": "[zh_CN] First, we analyze any "
+    "message": "首先，我们分析页面中嵌入的任何 "
   },
   "schemaLinkText": {
-    "message": "[zh_CN] Schema.org"
+    "message": "Schema.org"
   },
   "logic1Desc_2": {
-    "message": "[zh_CN]  structured data (in JSON-LD or microdata format) embedded in the page. This often contains the most accurate "
+    "message": " 结构化数据（JSON-LD 或 microdata 格式）。这通常直接从作者那里包含最准确的 "
   },
   "logic1Desc_3": {
-    "message": "[zh_CN]  (or "
+    "message": "（或 "
   },
   "logic1Desc_4": {
-    "message": "[zh_CN]  as a fallback) and "
+    "message": " 作为备用）和 "
   },
   "logic1Desc_5": {
-    "message": "[zh_CN]  properties directly from the author. Content is securely sanitized to handle malformed control characters."
+    "message": " 属性。内容经过安全清理，以处理格式错误的控制字符。"
   },
   "logic2Title": {
-    "message": "[zh_CN] Meta Tags"
+    "message": "元标签 (Meta Tags)"
   },
   "logic2Desc_1": {
-    "message": "[zh_CN] Next, we look for direct indicators in the page's meta tags. This includes standard tags like "
+    "message": "接下来，我们在页面的元标签中寻找直接的指示器。这包括标准标签，如 "
   },
   "logic2Desc_2": {
-    "message": "[zh_CN]  as well as "
+    "message": "，以及 "
   },
   "ogLinkText": {
-    "message": "[zh_CN] Open Graph (OG)"
+    "message": "开放图谱 (OG)"
   },
   "logic2Desc_3": {
-    "message": "[zh_CN]  tags like "
+    "message": " 标签，如 "
   },
   "logic2Desc_4": {
-    "message": "[zh_CN]  (for modified) and "
+    "message": "（用于修改）和 "
   },
   "logic2Desc_5": {
-    "message": "[zh_CN]  (for published)."
+    "message": "（用于发布）。"
   },
   "logic3Title": {
-    "message": "[zh_CN] HTML Content Patterns"
+    "message": "HTML 内容模式"
   },
   "logic3Desc_1": {
-    "message": "[zh_CN] If the above checks don't yield a result, we start looking at the visible content of the page. We search for HTML5 "
+    "message": "如果上述检查未产生结果，我们开始查看页面的可见内容。我们搜索 HTML5 "
   },
   "logic3Desc_2": {
-    "message": "[zh_CN]  elements and common phrases or CSS classes (like "
+    "message": " 元素和通常指示日期的常用短语或 CSS 类（如 "
   },
   "logic3Desc_3": {
-    "message": "[zh_CN]  or "
+    "message": " 或 "
   },
   "logic3Desc_4": {
-    "message": "[zh_CN] ) that often indicate dates."
+    "message": "）。"
   },
   "logic4Title": {
-    "message": "[zh_CN] URL Patterns"
+    "message": "URL 模式"
   },
   "logic4Desc_1": {
-    "message": "[zh_CN] If a publication date still hasn't been found, we scan the website's address (URL) for common date patterns (like "
+    "message": "如果仍未找到发布日期，我们会扫描网站的地址 (URL) 以寻找博客和新闻网站经常使用的常见日期模式（例如 "
   },
   "logic4Desc_2": {
-    "message": "[zh_CN] ) often used by blogs and news sites."
+    "message": "）。"
   },
   "logic5Title": {
-    "message": "[zh_CN] Unix Timestamp Parsing"
+    "message": "Unix 时间戳解析"
   },
   "logic5Desc": {
-    "message": "[zh_CN] Supports scanning structured elements and page content for both 10-digit (seconds) and 13-digit (milliseconds) Unix timestamps."
+    "message": "支持扫描结构化元素和页面内容中的 10 位（秒）和 13 位（毫秒）Unix 时间戳。"
   },
   "logic6Title": {
-    "message": "[zh_CN] HTTP Last-Modified Header"
+    "message": "HTTP Last-Modified 头部"
   },
   "logic6Desc_1": {
-    "message": "[zh_CN] As a final fallback for the "
+    "message": "作为"
   },
   "modifiedItalic": {
-    "message": "[zh_CN] modified"
+    "message": "修改"
   },
   "logic6Desc_2": {
-    "message": "[zh_CN]  date, we examine the "
+    "message": "日期的最终备用方案，我们检查 Web 服务器发送的 "
   },
   "logic6Desc_3": {
-    "message": "[zh_CN]  header sent by the web server. While this can sometimes be less precise, it can still provide a useful indication."
+    "message": " 头部。虽然这有时不够精确，但仍然可以提供有用的指示。"
   },
   "notePrefix": {
-    "message": "[zh_CN] Note:"
+    "message": "注意："
   },
   "noteText": {
-    "message": "[zh_CN]  We deliberately ignore some generic server headers and the system's \"current time\" to prevent incorrect publication dates. We also reject dates that appear to be in the future."
+    "message": "我们故意忽略某些通用的服务器头部和系统的“当前时间”，以防止出现错误的发布日期。我们还会拒绝看起来在未来的日期。"
   },
   "footerText1": {
-    "message": "[zh_CN] Page Timestamp Finder • By Brandon Scivolette • "
+    "message": "页面时间戳查找器 • 由 Brandon Scivolette 开发 • "
   }
 }

@@ -1,230 +1,230 @@
 {
   "extName": {
-    "message": "[ar] Page Timestamp Finder"
+    "message": "مكتشف طوابع الصفحة الزمنية"
   },
   "extDesc": {
-    "message": "[ar] Finds and displays the published and modified/updated timestamp of a webpage"
+    "message": "يجد ويعرض الطابع الزمني للنشر والتعديل لصفحة الويب"
   },
   "publishedLabel": {
-    "message": "[ar] Published:"
+    "message": "تم النشر:"
   },
   "modifiedLabel": {
-    "message": "[ar] Last Modified:"
+    "message": "آخر تعديل:"
   },
   "notFound": {
-    "message": "[ar] Not found"
+    "message": "غير موجود"
   },
   "noTimestampFound": {
-    "message": "[ar] No reliable timestamp found"
+    "message": "لا يوجد طابع زمني"
   },
   "sourceSchema": {
-    "message": "[ar] Schema.org"
+    "message": "Schema.org"
   },
   "sourceMeta": {
-    "message": "[ar] Meta Tag"
+    "message": "علامة وصفية"
   },
   "sourceMetaProp": {
-    "message": "[ar] Meta Property"
+    "message": "خاصية وصفية"
   },
   "sourceTimeTag": {
-    "message": "[ar] Page Content (time tag)"
+    "message": "محتوى الصفحة"
   },
   "sourceContent": {
-    "message": "[ar] Page Content"
+    "message": "محتوى الصفحة"
   },
   "sourceUrl": {
-    "message": "[ar] URL Pattern"
+    "message": "نمط الرابط"
   },
   "sourceRegex": {
-    "message": "[ar] Regex Scan"
+    "message": "فحص Regex"
   },
   "sourceHttp": {
-    "message": "[ar] HTTP Header"
+    "message": "ترويسة HTTP"
   },
   "optionsTitle": {
-    "message": "[ar] Timestamp Format Options"
+    "message": "خيارات التنسيق"
   },
   "dateFormatLabel": {
-    "message": "[ar] Date Format:"
+    "message": "تنسيق التاريخ:"
   },
   "timeFormatLabel": {
-    "message": "[ar] Time Format:"
+    "message": "تنسيق الوقت:"
   },
   "saveButton": {
-    "message": "[ar] Save"
+    "message": "حفظ"
   },
   "optionsSaved": {
-    "message": "[ar] Options saved."
+    "message": "تم حفظ الخيارات."
   },
   "option24Hour": {
-    "message": "[ar] 24-hour"
+    "message": "24 ساعة"
   },
   "option12Hour": {
-    "message": "[ar] 12-hour"
+    "message": "12 ساعة"
   },
   "optionISO": {
-    "message": "[ar] YYYY-MM-DD (ISO)"
+    "message": "YYYY-MM-DD (ISO)"
   },
   "onboardingTitle": {
-    "message": "[ar] Welcome to Page Timestamp Finder"
+    "message": "مرحبًا بك في مكتشف طوابع الصفحة الزمنية"
   },
   "onboardingSubtitle": {
-    "message": "[ar] Track when web pages were published or last updated with this simple, powerful extension."
+    "message": "تتبع متى تم نشر صفحات الويب أو تحديثها باستخدام هذه الإضافة."
   },
   "introTitle": {
-    "message": "[ar] Why We Built This Extension"
+    "message": "لماذا صممنا هذه الإضافة"
   },
   "introP1": {
-    "message": "[ar] Don't you hate it when you're on a webpage and you're unsure if the information is new or old?"
+    "message": "ألا تكره عندما تكون في صفحة ويب ولست متأكدًا مما إذا كانت المعلومات جديدة أم قديمة؟"
   },
   "introP2": {
-    "message": "[ar] Sadly, few websites clearly display when their content was published or last updated. This can be frustrating when you need to know if you're looking at current information."
+    "message": "للأسف، قليل من المواقع تعرض بوضوح وقت النشر أو التحديث."
   },
   "introP3_1": {
-    "message": "[ar] Page Timestamp Finder solves this problem by finding both the "
+    "message": "تحل الإضافة هذه المشكلة عن طريق إيجاد تاريخي "
   },
   "publishedBold": {
-    "message": "[ar] published"
+    "message": "النشر"
   },
   "introP3_2": {
-    "message": "[ar]  and "
+    "message": " و "
   },
   "modifiedBold": {
-    "message": "[ar] last modified"
+    "message": "آخر تعديل"
   },
   "introP3_3": {
-    "message": "[ar]  dates of a page. Simply click the extension icon to find out, giving you confidence in the content you're reading."
+    "message": ". انقر على الأيقونة لمعرفة ذلك."
   },
   "highlightText": {
-    "message": "[ar] For the best experience, we recommend pinning this extension to your toolbar for easy access."
+    "message": "لأفضل تجربة، نوصي بتثبيت هذه الإضافة في شريط الأدوات الخاص بك."
   },
   "step1Title": {
-    "message": "[ar] Pin Page Timestamp Finder to your toolbar"
+    "message": "ثبّت الإضافة"
   },
   "step1Desc": {
-    "message": "[ar] Click the pin icon next to our extension to keep it visible at all times."
+    "message": "انقر على أيقونة الدبوس لجعلها مرئية."
   },
   "step1Caption": {
-    "message": "[ar] Pinning gives you quick access to the extension's features from any webpage."
+    "message": "التثبيت يتيح لك وصولاً سريعاً."
   },
   "step2Title": {
-    "message": "[ar] Click the extension icon"
+    "message": "انقر على أيقونة الإضافة"
   },
   "step2Desc": {
-    "message": "[ar] To find the timestamp for a page, just click the extension icon. The extension finds both \"published\" and \"modified\" dates."
+    "message": "للعثور على الطابع الزمني، فقط انقر على الأيقونة."
   },
   "step2Caption": {
-    "message": "[ar] When timestamps are available you'll see the details in an overlay in the right corner."
+    "message": "سترى التفاصيل في زاوية الشاشة."
   },
   "step3Title": {
-    "message": "[ar] Customize your experience"
+    "message": "تخصيص تجربتك"
   },
   "step3Desc": {
-    "message": "[ar] You can set your preferred date and time format. Right-click the extension icon, select \"Options\", and choose the format that works best for you."
+    "message": "يمكنك ضبط تنسيق التاريخ والوقت المفضل لديك في 'الخيارات'."
   },
   "howItWorksTitle": {
-    "message": "[ar] How the Extension Works"
+    "message": "كيف تعمل الإضافة"
   },
   "howItWorksDesc_1": {
-    "message": "[ar] We intelligently scan the webpage for both "
+    "message": "نقوم بفحص صفحة الويب للبحث عن "
   },
   "howItWorksDesc_2": {
-    "message": "[ar]  timestamps, checking various locations where a date might be hiding. Our approach follows a logical sequence, prioritizing the most reliable sources first:"
+    "message": " طوابع زمنية، مع إعطاء الأولوية لأكثر المصادر موثوقية:"
   },
   "logic1Title": {
-    "message": "[ar] Schema.org Structured Data"
+    "message": "البيانات المنظمة Schema.org"
   },
   "logic1Desc_1": {
-    "message": "[ar] First, we analyze any "
+    "message": "أولاً، نقوم بتحليل أي بيانات "
   },
   "schemaLinkText": {
-    "message": "[ar] Schema.org"
+    "message": "Schema.org"
   },
   "logic1Desc_2": {
-    "message": "[ar]  structured data (in JSON-LD or microdata format) embedded in the page. This often contains the most accurate "
+    "message": " منظمة. هذا يحتوي على "
   },
   "logic1Desc_3": {
-    "message": "[ar]  (or "
+    "message": " (أو "
   },
   "logic1Desc_4": {
-    "message": "[ar]  as a fallback) and "
+    "message": ") و "
   },
   "logic1Desc_5": {
-    "message": "[ar]  properties directly from the author. Content is securely sanitized to handle malformed control characters."
+    "message": " بخصائص دقيقة."
   },
   "logic2Title": {
-    "message": "[ar] Meta Tags"
+    "message": "العلامات الوصفية"
   },
   "logic2Desc_1": {
-    "message": "[ar] Next, we look for direct indicators in the page's meta tags. This includes standard tags like "
+    "message": "ثم، نبحث عن العلامات الوصفية، مثل "
   },
   "logic2Desc_2": {
-    "message": "[ar]  as well as "
+    "message": " وكذلك "
   },
   "ogLinkText": {
-    "message": "[ar] Open Graph (OG)"
+    "message": "Open Graph (OG)"
   },
   "logic2Desc_3": {
-    "message": "[ar]  tags like "
+    "message": " مثل "
   },
   "logic2Desc_4": {
-    "message": "[ar]  (for modified) and "
+    "message": " (للتعديل) و "
   },
   "logic2Desc_5": {
-    "message": "[ar]  (for published)."
+    "message": " (للنشر)."
   },
   "logic3Title": {
-    "message": "[ar] HTML Content Patterns"
+    "message": "أنماط محتوى HTML"
   },
   "logic3Desc_1": {
-    "message": "[ar] If the above checks don't yield a result, we start looking at the visible content of the page. We search for HTML5 "
+    "message": "نبحث عن عناصر HTML5 "
   },
   "logic3Desc_2": {
-    "message": "[ar]  elements and common phrases or CSS classes (like "
+    "message": " والعبارات الشائعة أو فئات CSS (مثل "
   },
   "logic3Desc_3": {
-    "message": "[ar]  or "
+    "message": " أو "
   },
   "logic3Desc_4": {
-    "message": "[ar] ) that often indicate dates."
+    "message": ") التي تشير إلى التواريخ."
   },
   "logic4Title": {
-    "message": "[ar] URL Patterns"
+    "message": "أنماط URL"
   },
   "logic4Desc_1": {
-    "message": "[ar] If a publication date still hasn't been found, we scan the website's address (URL) for common date patterns (like "
+    "message": "نفحص الرابط بحثًا عن أنماط تاريخ شائعة (مثل "
   },
   "logic4Desc_2": {
-    "message": "[ar] ) often used by blogs and news sites."
+    "message": ")."
   },
   "logic5Title": {
-    "message": "[ar] Unix Timestamp Parsing"
+    "message": "تحليل طوابع Unix"
   },
   "logic5Desc": {
-    "message": "[ar] Supports scanning structured elements and page content for both 10-digit (seconds) and 13-digit (milliseconds) Unix timestamps."
+    "message": "يدعم طوابع Unix ذات 10 و 13 رقمًا."
   },
   "logic6Title": {
-    "message": "[ar] HTTP Last-Modified Header"
+    "message": "ترويسة HTTP Last-Modified"
   },
   "logic6Desc_1": {
-    "message": "[ar] As a final fallback for the "
+    "message": "كملاذ أخير لتاريخ "
   },
   "modifiedItalic": {
-    "message": "[ar] modified"
+    "message": "التعديل"
   },
   "logic6Desc_2": {
-    "message": "[ar]  date, we examine the "
+    "message": "، نتحقق من ترويسة "
   },
   "logic6Desc_3": {
-    "message": "[ar]  header sent by the web server. While this can sometimes be less precise, it can still provide a useful indication."
+    "message": " المرسلة بواسطة الخادم."
   },
   "notePrefix": {
-    "message": "[ar] Note:"
+    "message": "ملاحظة:"
   },
   "noteText": {
-    "message": "[ar]  We deliberately ignore some generic server headers and the system's \"current time\" to prevent incorrect publication dates. We also reject dates that appear to be in the future."
+    "message": " نحن نتجاهل وقت النظام لتجنب التواريخ غير الصحيحة ونرفض التواريخ المستقبلية."
   },
   "footerText1": {
-    "message": "[ar] Page Timestamp Finder • By Brandon Scivolette • "
+    "message": "مكتشف طوابع الصفحة الزمنية • بواسطة Brandon Scivolette • "
   }
 }

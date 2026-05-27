@@ -1,230 +1,230 @@
 {
   "extName": {
-    "message": "[es] Page Timestamp Finder"
+    "message": "Buscador de Marcas de Tiempo"
   },
   "extDesc": {
-    "message": "[es] Finds and displays the published and modified/updated timestamp of a webpage"
+    "message": "Encuentra y muestra la marca de tiempo de publicación y modificación de una página web"
   },
   "publishedLabel": {
-    "message": "[es] Published:"
+    "message": "Publicado:"
   },
   "modifiedLabel": {
-    "message": "[es] Last Modified:"
+    "message": "Última Modificación:"
   },
   "notFound": {
-    "message": "[es] Not found"
+    "message": "No encontrado"
   },
   "noTimestampFound": {
-    "message": "[es] No reliable timestamp found"
+    "message": "No se encontró marca de tiempo"
   },
   "sourceSchema": {
-    "message": "[es] Schema.org"
+    "message": "Schema.org"
   },
   "sourceMeta": {
-    "message": "[es] Meta Tag"
+    "message": "Etiqueta Meta"
   },
   "sourceMetaProp": {
-    "message": "[es] Meta Property"
+    "message": "Propiedad Meta"
   },
   "sourceTimeTag": {
-    "message": "[es] Page Content (time tag)"
+    "message": "Contenido de la Página (etiqueta time)"
   },
   "sourceContent": {
-    "message": "[es] Page Content"
+    "message": "Contenido de la Página"
   },
   "sourceUrl": {
-    "message": "[es] URL Pattern"
+    "message": "Patrón de URL"
   },
   "sourceRegex": {
-    "message": "[es] Regex Scan"
+    "message": "Escaneo Regex"
   },
   "sourceHttp": {
-    "message": "[es] HTTP Header"
+    "message": "Cabecera HTTP"
   },
   "optionsTitle": {
-    "message": "[es] Timestamp Format Options"
+    "message": "Opciones de Formato"
   },
   "dateFormatLabel": {
-    "message": "[es] Date Format:"
+    "message": "Formato de Fecha:"
   },
   "timeFormatLabel": {
-    "message": "[es] Time Format:"
+    "message": "Formato de Hora:"
   },
   "saveButton": {
-    "message": "[es] Save"
+    "message": "Guardar"
   },
   "optionsSaved": {
-    "message": "[es] Options saved."
+    "message": "Opciones guardadas."
   },
   "option24Hour": {
-    "message": "[es] 24-hour"
+    "message": "24 horas"
   },
   "option12Hour": {
-    "message": "[es] 12-hour"
+    "message": "12 horas"
   },
   "optionISO": {
-    "message": "[es] YYYY-MM-DD (ISO)"
+    "message": "AAAA-MM-DD (ISO)"
   },
   "onboardingTitle": {
-    "message": "[es] Welcome to Page Timestamp Finder"
+    "message": "Bienvenido a Buscador de Marcas de Tiempo"
   },
   "onboardingSubtitle": {
-    "message": "[es] Track when web pages were published or last updated with this simple, powerful extension."
+    "message": "Rastrea cuándo se publicaron o actualizaron las páginas web con esta extensión."
   },
   "introTitle": {
-    "message": "[es] Why We Built This Extension"
+    "message": "Por Qué Creamos Esta Extensión"
   },
   "introP1": {
-    "message": "[es] Don't you hate it when you're on a webpage and you're unsure if the information is new or old?"
+    "message": "¿No odias cuando estás en una página web y no estás seguro de si la información es nueva o vieja?"
   },
   "introP2": {
-    "message": "[es] Sadly, few websites clearly display when their content was published or last updated. This can be frustrating when you need to know if you're looking at current information."
+    "message": "Lamentablemente, pocos sitios muestran claramente cuándo se publicó o actualizó su contenido."
   },
   "introP3_1": {
-    "message": "[es] Page Timestamp Finder solves this problem by finding both the "
+    "message": "Buscador de Marcas de Tiempo resuelve esto encontrando tanto la fecha de "
   },
   "publishedBold": {
-    "message": "[es] published"
+    "message": "publicación"
   },
   "introP3_2": {
-    "message": "[es]  and "
+    "message": " como de "
   },
   "modifiedBold": {
-    "message": "[es] last modified"
+    "message": "última modificación"
   },
   "introP3_3": {
-    "message": "[es]  dates of a page. Simply click the extension icon to find out, giving you confidence in the content you're reading."
+    "message": ". Simplemente haz clic en el icono para averiguarlo."
   },
   "highlightText": {
-    "message": "[es] For the best experience, we recommend pinning this extension to your toolbar for easy access."
+    "message": "Para una mejor experiencia, recomendamos fijar esta extensión en tu barra de herramientas."
   },
   "step1Title": {
-    "message": "[es] Pin Page Timestamp Finder to your toolbar"
+    "message": "Fija Buscador de Marcas de Tiempo"
   },
   "step1Desc": {
-    "message": "[es] Click the pin icon next to our extension to keep it visible at all times."
+    "message": "Haz clic en el icono de la chincheta para mantenerlo visible."
   },
   "step1Caption": {
-    "message": "[es] Pinning gives you quick access to the extension's features from any webpage."
+    "message": "Fijar te da acceso rápido desde cualquier página web."
   },
   "step2Title": {
-    "message": "[es] Click the extension icon"
+    "message": "Haz clic en el icono de la extensión"
   },
   "step2Desc": {
-    "message": "[es] To find the timestamp for a page, just click the extension icon. The extension finds both \"published\" and \"modified\" dates."
+    "message": "Para encontrar la marca de tiempo, haz clic en el icono. Encuentra fechas de 'publicación' y 'modificación'."
   },
   "step2Caption": {
-    "message": "[es] When timestamps are available you'll see the details in an overlay in the right corner."
+    "message": "Verás los detalles en una superposición en la esquina derecha."
   },
   "step3Title": {
-    "message": "[es] Customize your experience"
+    "message": "Personaliza tu experiencia"
   },
   "step3Desc": {
-    "message": "[es] You can set your preferred date and time format. Right-click the extension icon, select \"Options\", and choose the format that works best for you."
+    "message": "Puedes configurar tu formato de fecha y hora preferido en 'Opciones'."
   },
   "howItWorksTitle": {
-    "message": "[es] How the Extension Works"
+    "message": "Cómo Funciona la Extensión"
   },
   "howItWorksDesc_1": {
-    "message": "[es] We intelligently scan the webpage for both "
+    "message": "Escaneamos inteligentemente la página web en busca de marcas de tiempo "
   },
   "howItWorksDesc_2": {
-    "message": "[es]  timestamps, checking various locations where a date might be hiding. Our approach follows a logical sequence, prioritizing the most reliable sources first:"
+    "message": " , priorizando las fuentes más confiables:"
   },
   "logic1Title": {
-    "message": "[es] Schema.org Structured Data"
+    "message": "Datos Estructurados Schema.org"
   },
   "logic1Desc_1": {
-    "message": "[es] First, we analyze any "
+    "message": "Primero, analizamos "
   },
   "schemaLinkText": {
-    "message": "[es] Schema.org"
+    "message": "Schema.org"
   },
   "logic1Desc_2": {
-    "message": "[es]  structured data (in JSON-LD or microdata format) embedded in the page. This often contains the most accurate "
+    "message": " datos estructurados incrustados en la página. Esto contiene las propiedades "
   },
   "logic1Desc_3": {
-    "message": "[es]  (or "
+    "message": " (o "
   },
   "logic1Desc_4": {
-    "message": "[es]  as a fallback) and "
+    "message": " como respaldo) y "
   },
   "logic1Desc_5": {
-    "message": "[es]  properties directly from the author. Content is securely sanitized to handle malformed control characters."
+    "message": " más precisas."
   },
   "logic2Title": {
-    "message": "[es] Meta Tags"
+    "message": "Etiquetas Meta"
   },
   "logic2Desc_1": {
-    "message": "[es] Next, we look for direct indicators in the page's meta tags. This includes standard tags like "
+    "message": "Luego, buscamos indicadores en las etiquetas meta, como "
   },
   "logic2Desc_2": {
-    "message": "[es]  as well as "
+    "message": " así como etiquetas de "
   },
   "ogLinkText": {
-    "message": "[es] Open Graph (OG)"
+    "message": "Open Graph (OG)"
   },
   "logic2Desc_3": {
-    "message": "[es]  tags like "
+    "message": " como "
   },
   "logic2Desc_4": {
-    "message": "[es]  (for modified) and "
+    "message": " (modificado) y "
   },
   "logic2Desc_5": {
-    "message": "[es]  (for published)."
+    "message": " (publicado)."
   },
   "logic3Title": {
-    "message": "[es] HTML Content Patterns"
+    "message": "Patrones de Contenido HTML"
   },
   "logic3Desc_1": {
-    "message": "[es] If the above checks don't yield a result, we start looking at the visible content of the page. We search for HTML5 "
+    "message": "Buscamos elementos HTML5 "
   },
   "logic3Desc_2": {
-    "message": "[es]  elements and common phrases or CSS classes (like "
+    "message": " y frases comunes o clases CSS (como "
   },
   "logic3Desc_3": {
-    "message": "[es]  or "
+    "message": " o "
   },
   "logic3Desc_4": {
-    "message": "[es] ) that often indicate dates."
+    "message": ") que indican fechas."
   },
   "logic4Title": {
-    "message": "[es] URL Patterns"
+    "message": "Patrones de URL"
   },
   "logic4Desc_1": {
-    "message": "[es] If a publication date still hasn't been found, we scan the website's address (URL) for common date patterns (like "
+    "message": "Escaneamos la dirección del sitio web (URL) para patrones de fecha comunes (como "
   },
   "logic4Desc_2": {
-    "message": "[es] ) often used by blogs and news sites."
+    "message": ")."
   },
   "logic5Title": {
-    "message": "[es] Unix Timestamp Parsing"
+    "message": "Análisis de Timestamp Unix"
   },
   "logic5Desc": {
-    "message": "[es] Supports scanning structured elements and page content for both 10-digit (seconds) and 13-digit (milliseconds) Unix timestamps."
+    "message": "Soporta escaneo de marcas de tiempo Unix de 10 y 13 dígitos."
   },
   "logic6Title": {
-    "message": "[es] HTTP Last-Modified Header"
+    "message": "Cabecera HTTP Last-Modified"
   },
   "logic6Desc_1": {
-    "message": "[es] As a final fallback for the "
+    "message": "Como último respaldo para la fecha de "
   },
   "modifiedItalic": {
-    "message": "[es] modified"
+    "message": "modificación"
   },
   "logic6Desc_2": {
-    "message": "[es]  date, we examine the "
+    "message": ", examinamos la cabecera "
   },
   "logic6Desc_3": {
-    "message": "[es]  header sent by the web server. While this can sometimes be less precise, it can still provide a useful indication."
+    "message": " enviada por el servidor web."
   },
   "notePrefix": {
-    "message": "[es] Note:"
+    "message": "Nota:"
   },
   "noteText": {
-    "message": "[es]  We deliberately ignore some generic server headers and the system's \"current time\" to prevent incorrect publication dates. We also reject dates that appear to be in the future."
+    "message": " Ignoramos la 'hora actual' del sistema para evitar fechas incorrectas y rechazamos fechas en el futuro."
   },
   "footerText1": {
-    "message": "[es] Page Timestamp Finder • By Brandon Scivolette • "
+    "message": "Buscador de Marcas de Tiempo • Por Brandon Scivolette • "
   }
 }
