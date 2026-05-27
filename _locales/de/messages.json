@@ -1,0 +1,230 @@
+{
+  "extName": {
+    "message": "Seiten-Zeitstempel-Finder"
+  },
+  "extDesc": {
+    "message": "Findet und zeigt den Veröffentlichungs- und Änderungszeitstempel einer Webseite an"
+  },
+  "publishedLabel": {
+    "message": "Veröffentlicht:"
+  },
+  "modifiedLabel": {
+    "message": "Zuletzt geändert:"
+  },
+  "notFound": {
+    "message": "Nicht gefunden"
+  },
+  "noTimestampFound": {
+    "message": "Kein zuverlässiger Zeitstempel gefunden"
+  },
+  "sourceSchema": {
+    "message": "Schema.org"
+  },
+  "sourceMeta": {
+    "message": "Meta-Tag"
+  },
+  "sourceMetaProp": {
+    "message": "Meta-Eigenschaft"
+  },
+  "sourceTimeTag": {
+    "message": "Seiteninhalt (time-Tag)"
+  },
+  "sourceContent": {
+    "message": "Seiteninhalt"
+  },
+  "sourceUrl": {
+    "message": "URL-Muster"
+  },
+  "sourceRegex": {
+    "message": "Regex-Scan"
+  },
+  "sourceHttp": {
+    "message": "HTTP-Header"
+  },
+  "optionsTitle": {
+    "message": "Zeitstempel-Format-Optionen"
+  },
+  "dateFormatLabel": {
+    "message": "Datumsformat:"
+  },
+  "timeFormatLabel": {
+    "message": "Zeitformat:"
+  },
+  "saveButton": {
+    "message": "Speichern"
+  },
+  "optionsSaved": {
+    "message": "Optionen gespeichert."
+  },
+  "option24Hour": {
+    "message": "24-Stunden"
+  },
+  "option12Hour": {
+    "message": "12-Stunden"
+  },
+  "optionISO": {
+    "message": "JJJJ-MM-TT (ISO)"
+  },
+  "onboardingTitle": {
+    "message": "Willkommen beim Seiten-Zeitstempel-Finder"
+  },
+  "onboardingSubtitle": {
+    "message": "Verfolgen Sie, wann Webseiten mit dieser Erweiterung veröffentlicht oder aktualisiert wurden."
+  },
+  "introTitle": {
+    "message": "Warum wir diese Erweiterung gebaut haben"
+  },
+  "introP1": {
+    "message": "Hassen Sie es nicht, wenn Sie auf einer Webseite sind und sich nicht sicher sind, ob die Informationen neu oder alt sind?"
+  },
+  "introP2": {
+    "message": "Leider zeigen nur wenige Websites deutlich an, wann ihre Inhalte veröffentlicht oder aktualisiert wurden."
+  },
+  "introP3_1": {
+    "message": "Der Seiten-Zeitstempel-Finder löst dies, indem er sowohl das "
+  },
+  "publishedBold": {
+    "message": "Veröffentlichungs-"
+  },
+  "introP3_2": {
+    "message": " als auch das "
+  },
+  "modifiedBold": {
+    "message": "Änderungsdatum"
+  },
+  "introP3_3": {
+    "message": " einer Seite findet. Klicken Sie einfach auf das Symbol, um es herauszufinden."
+  },
+  "highlightText": {
+    "message": "Für das beste Erlebnis empfehlen wir, diese Erweiterung an Ihre Symbolleiste anzuheften."
+  },
+  "step1Title": {
+    "message": "Erweiterung anheften"
+  },
+  "step1Desc": {
+    "message": "Klicken Sie auf das Pin-Symbol, um sie sichtbar zu halten."
+  },
+  "step1Caption": {
+    "message": "Das Anheften ermöglicht Ihnen einen schnellen Zugriff von jeder Webseite aus."
+  },
+  "step2Title": {
+    "message": "Klicken Sie auf das Erweiterungssymbol"
+  },
+  "step2Desc": {
+    "message": "Um den Zeitstempel zu finden, klicken Sie einfach auf das Symbol."
+  },
+  "step2Caption": {
+    "message": "Sie sehen die Details in einem Overlay in der rechten Ecke."
+  },
+  "step3Title": {
+    "message": "Passen Sie Ihr Erlebnis an"
+  },
+  "step3Desc": {
+    "message": "Sie können Ihr bevorzugtes Datums- und Zeitformat in den 'Optionen' festlegen."
+  },
+  "howItWorksTitle": {
+    "message": "Wie die Erweiterung funktioniert"
+  },
+  "howItWorksDesc_1": {
+    "message": "Wir scannen die Webseite intelligent nach "
+  },
+  "howItWorksDesc_2": {
+    "message": " Zeitstempeln und priorisieren die zuverlässigsten Quellen:"
+  },
+  "logic1Title": {
+    "message": "Schema.org Strukturierte Daten"
+  },
+  "logic1Desc_1": {
+    "message": "Zuerst analysieren wir eingebettete "
+  },
+  "schemaLinkText": {
+    "message": "Schema.org"
+  },
+  "logic1Desc_2": {
+    "message": " strukturierte Daten. Diese enthalten die genauesten "
+  },
+  "logic1Desc_3": {
+    "message": " (oder "
+  },
+  "logic1Desc_4": {
+    "message": " ) und "
+  },
+  "logic1Desc_5": {
+    "message": " Eigenschaften."
+  },
+  "logic2Title": {
+    "message": "Meta-Tags"
+  },
+  "logic2Desc_1": {
+    "message": "Als nächstes suchen wir nach Indikatoren in Meta-Tags wie "
+  },
+  "logic2Desc_2": {
+    "message": " sowie "
+  },
+  "ogLinkText": {
+    "message": "Open Graph (OG)"
+  },
+  "logic2Desc_3": {
+    "message": " Tags wie "
+  },
+  "logic2Desc_4": {
+    "message": " (für Änderung) und "
+  },
+  "logic2Desc_5": {
+    "message": " (für Veröffentlichung)."
+  },
+  "logic3Title": {
+    "message": "HTML-Inhaltsmuster"
+  },
+  "logic3Desc_1": {
+    "message": "Wir suchen nach HTML5 "
+  },
+  "logic3Desc_2": {
+    "message": " Elementen und gängigen Phrasen oder CSS-Klassen (wie "
+  },
+  "logic3Desc_3": {
+    "message": " oder "
+  },
+  "logic3Desc_4": {
+    "message": "), die auf Daten hinweisen."
+  },
+  "logic4Title": {
+    "message": "URL-Muster"
+  },
+  "logic4Desc_1": {
+    "message": "Wir scannen die Website-Adresse (URL) nach gängigen Datumsmustern (wie "
+  },
+  "logic4Desc_2": {
+    "message": ")."
+  },
+  "logic5Title": {
+    "message": "Unix-Zeitstempel-Parsing"
+  },
+  "logic5Desc": {
+    "message": "Unterstützt das Scannen nach 10- und 13-stelligen Unix-Zeitstempeln."
+  },
+  "logic6Title": {
+    "message": "HTTP Last-Modified Header"
+  },
+  "logic6Desc_1": {
+    "message": "Als letzter Rückgriff für das "
+  },
+  "modifiedItalic": {
+    "message": "Änderungsdatum"
+  },
+  "logic6Desc_2": {
+    "message": " untersuchen wir den vom Webserver gesendeten "
+  },
+  "logic6Desc_3": {
+    "message": " Header."
+  },
+  "notePrefix": {
+    "message": "Hinweis:"
+  },
+  "noteText": {
+    "message": " Wir ignorieren die Systemzeit, um falsche Daten zu verhindern, und lehnen zukünftige Daten ab."
+  },
+  "footerText1": {
+    "message": "Seiten-Zeitstempel-Finder • Von Brandon Scivolette • "
+  }
+}

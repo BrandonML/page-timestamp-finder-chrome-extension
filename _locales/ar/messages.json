@@ -1,0 +1,230 @@
+{
+  "extName": {
+    "message": "مكتشف طوابع الصفحة الزمنية"
+  },
+  "extDesc": {
+    "message": "يجد ويعرض الطابع الزمني للنشر والتعديل لصفحة الويب"
+  },
+  "publishedLabel": {
+    "message": "تم النشر:"
+  },
+  "modifiedLabel": {
+    "message": "آخر تعديل:"
+  },
+  "notFound": {
+    "message": "غير موجود"
+  },
+  "noTimestampFound": {
+    "message": "لا يوجد طابع زمني"
+  },
+  "sourceSchema": {
+    "message": "Schema.org"
+  },
+  "sourceMeta": {
+    "message": "علامة وصفية"
+  },
+  "sourceMetaProp": {
+    "message": "خاصية وصفية"
+  },
+  "sourceTimeTag": {
+    "message": "محتوى الصفحة"
+  },
+  "sourceContent": {
+    "message": "محتوى الصفحة"
+  },
+  "sourceUrl": {
+    "message": "نمط الرابط"
+  },
+  "sourceRegex": {
+    "message": "فحص Regex"
+  },
+  "sourceHttp": {
+    "message": "ترويسة HTTP"
+  },
+  "optionsTitle": {
+    "message": "خيارات التنسيق"
+  },
+  "dateFormatLabel": {
+    "message": "تنسيق التاريخ:"
+  },
+  "timeFormatLabel": {
+    "message": "تنسيق الوقت:"
+  },
+  "saveButton": {
+    "message": "حفظ"
+  },
+  "optionsSaved": {
+    "message": "تم حفظ الخيارات."
+  },
+  "option24Hour": {
+    "message": "24 ساعة"
+  },
+  "option12Hour": {
+    "message": "12 ساعة"
+  },
+  "optionISO": {
+    "message": "YYYY-MM-DD (ISO)"
+  },
+  "onboardingTitle": {
+    "message": "مرحبًا بك في مكتشف طوابع الصفحة الزمنية"
+  },
+  "onboardingSubtitle": {
+    "message": "تتبع متى تم نشر صفحات الويب أو تحديثها باستخدام هذه الإضافة."
+  },
+  "introTitle": {
+    "message": "لماذا صممنا هذه الإضافة"
+  },
+  "introP1": {
+    "message": "ألا تكره عندما تكون في صفحة ويب ولست متأكدًا مما إذا كانت المعلومات جديدة أم قديمة؟"
+  },
+  "introP2": {
+    "message": "للأسف، قليل من المواقع تعرض بوضوح وقت النشر أو التحديث."
+  },
+  "introP3_1": {
+    "message": "تحل الإضافة هذه المشكلة عن طريق إيجاد تاريخي "
+  },
+  "publishedBold": {
+    "message": "النشر"
+  },
+  "introP3_2": {
+    "message": " و "
+  },
+  "modifiedBold": {
+    "message": "آخر تعديل"
+  },
+  "introP3_3": {
+    "message": ". انقر على الأيقونة لمعرفة ذلك."
+  },
+  "highlightText": {
+    "message": "لأفضل تجربة، نوصي بتثبيت هذه الإضافة في شريط الأدوات الخاص بك."
+  },
+  "step1Title": {
+    "message": "ثبّت الإضافة"
+  },
+  "step1Desc": {
+    "message": "انقر على أيقونة الدبوس لجعلها مرئية."
+  },
+  "step1Caption": {
+    "message": "التثبيت يتيح لك وصولاً سريعاً."
+  },
+  "step2Title": {
+    "message": "انقر على أيقونة الإضافة"
+  },
+  "step2Desc": {
+    "message": "للعثور على الطابع الزمني، فقط انقر على الأيقونة."
+  },
+  "step2Caption": {
+    "message": "سترى التفاصيل في زاوية الشاشة."
+  },
+  "step3Title": {
+    "message": "تخصيص تجربتك"
+  },
+  "step3Desc": {
+    "message": "يمكنك ضبط تنسيق التاريخ والوقت المفضل لديك في 'الخيارات'."
+  },
+  "howItWorksTitle": {
+    "message": "كيف تعمل الإضافة"
+  },
+  "howItWorksDesc_1": {
+    "message": "نقوم بفحص صفحة الويب للبحث عن "
+  },
+  "howItWorksDesc_2": {
+    "message": " طوابع زمنية، مع إعطاء الأولوية لأكثر المصادر موثوقية:"
+  },
+  "logic1Title": {
+    "message": "البيانات المنظمة Schema.org"
+  },
+  "logic1Desc_1": {
+    "message": "أولاً، نقوم بتحليل أي بيانات "
+  },
+  "schemaLinkText": {
+    "message": "Schema.org"
+  },
+  "logic1Desc_2": {
+    "message": " منظمة. هذا يحتوي على "
+  },
+  "logic1Desc_3": {
+    "message": " (أو "
+  },
+  "logic1Desc_4": {
+    "message": ") و "
+  },
+  "logic1Desc_5": {
+    "message": " بخصائص دقيقة."
+  },
+  "logic2Title": {
+    "message": "العلامات الوصفية"
+  },
+  "logic2Desc_1": {
+    "message": "ثم، نبحث عن العلامات الوصفية، مثل "
+  },
+  "logic2Desc_2": {
+    "message": " وكذلك "
+  },
+  "ogLinkText": {
+    "message": "Open Graph (OG)"
+  },
+  "logic2Desc_3": {
+    "message": " مثل "
+  },
+  "logic2Desc_4": {
+    "message": " (للتعديل) و "
+  },
+  "logic2Desc_5": {
+    "message": " (للنشر)."
+  },
+  "logic3Title": {
+    "message": "أنماط محتوى HTML"
+  },
+  "logic3Desc_1": {
+    "message": "نبحث عن عناصر HTML5 "
+  },
+  "logic3Desc_2": {
+    "message": " والعبارات الشائعة أو فئات CSS (مثل "
+  },
+  "logic3Desc_3": {
+    "message": " أو "
+  },
+  "logic3Desc_4": {
+    "message": ") التي تشير إلى التواريخ."
+  },
+  "logic4Title": {
+    "message": "أنماط URL"
+  },
+  "logic4Desc_1": {
+    "message": "نفحص الرابط بحثًا عن أنماط تاريخ شائعة (مثل "
+  },
+  "logic4Desc_2": {
+    "message": ")."
+  },
+  "logic5Title": {
+    "message": "تحليل طوابع Unix"
+  },
+  "logic5Desc": {
+    "message": "يدعم طوابع Unix ذات 10 و 13 رقمًا."
+  },
+  "logic6Title": {
+    "message": "ترويسة HTTP Last-Modified"
+  },
+  "logic6Desc_1": {
+    "message": "كملاذ أخير لتاريخ "
+  },
+  "modifiedItalic": {
+    "message": "التعديل"
+  },
+  "logic6Desc_2": {
+    "message": "، نتحقق من ترويسة "
+  },
+  "logic6Desc_3": {
+    "message": " المرسلة بواسطة الخادم."
+  },
+  "notePrefix": {
+    "message": "ملاحظة:"
+  },
+  "noteText": {
+    "message": " نحن نتجاهل وقت النظام لتجنب التواريخ غير الصحيحة ونرفض التواريخ المستقبلية."
+  },
+  "footerText1": {
+    "message": "مكتشف طوابع الصفحة الزمنية • بواسطة Brandon Scivolette • "
+  }
+}

@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
-    "name": "Page Timestamp Finder",
-    "version": "1.2.3",
-    "description": "Finds and displays the published and modified/updated timestamp of a webpage",
+    "name": "__MSG_extName__",
+    "version": "1.3.0",
+    "description": "__MSG_extDesc__",
     "permissions": [
         "activeTab",
         "scripting",
@@ -15,7 +15,7 @@
             "48": "images/icon-48.png",
             "128": "images/icon-128.png"
         },
-        "default_title": "Page Timestamp Finder"
+        "default_title": "__MSG_extName__"
     },
     "background": {
         "service_worker": "background.js"
@@ -34,5 +34,6 @@
                 "<all_urls>"
             ]
         }
-    ]
+    ],
+    "default_locale": "en"
 }

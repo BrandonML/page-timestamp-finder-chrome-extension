@@ -1,0 +1,230 @@
+{
+  "extName": {
+    "message": "पृष्ठ टाइमस्टैम्प खोजक"
+  },
+  "extDesc": {
+    "message": "किसी वेबपेज के प्रकाशित और संशोधित टाइमस्टैम्प को ढूंढता और प्रदर्शित करता है"
+  },
+  "publishedLabel": {
+    "message": "प्रकाशित:"
+  },
+  "modifiedLabel": {
+    "message": "अंतिम संशोधित:"
+  },
+  "notFound": {
+    "message": "नहीं मिला"
+  },
+  "noTimestampFound": {
+    "message": "कोई विश्वसनीय टाइमस्टैम्प नहीं मिला"
+  },
+  "sourceSchema": {
+    "message": "Schema.org"
+  },
+  "sourceMeta": {
+    "message": "मेटा टैग"
+  },
+  "sourceMetaProp": {
+    "message": "मेटा प्रॉपर्टी"
+  },
+  "sourceTimeTag": {
+    "message": "पृष्ठ सामग्री (समय टैग)"
+  },
+  "sourceContent": {
+    "message": "पृष्ठ सामग्री"
+  },
+  "sourceUrl": {
+    "message": "URL पैटर्न"
+  },
+  "sourceRegex": {
+    "message": "रेगेक्स स्कैन"
+  },
+  "sourceHttp": {
+    "message": "HTTP हैडर"
+  },
+  "optionsTitle": {
+    "message": "टाइमस्टैम्प प्रारूप विकल्प"
+  },
+  "dateFormatLabel": {
+    "message": "दिनांक प्रारूप:"
+  },
+  "timeFormatLabel": {
+    "message": "समय प्रारूप:"
+  },
+  "saveButton": {
+    "message": "सहेजें"
+  },
+  "optionsSaved": {
+    "message": "विकल्प सहेजे गए।"
+  },
+  "option24Hour": {
+    "message": "24-घंटे"
+  },
+  "option12Hour": {
+    "message": "12-घंटे"
+  },
+  "optionISO": {
+    "message": "YYYY-MM-DD (ISO)"
+  },
+  "onboardingTitle": {
+    "message": "पृष्ठ टाइमस्टैम्प खोजक में आपका स्वागत है"
+  },
+  "onboardingSubtitle": {
+    "message": "इस एक्सटेंशन के साथ ट्रैक करें कि वेब पेज कब प्रकाशित या अपडेट किए गए थे।"
+  },
+  "introTitle": {
+    "message": "हमने यह एक्सटेंशन क्यों बनाया"
+  },
+  "introP1": {
+    "message": "क्या आपको यह बुरा नहीं लगता जब आप किसी वेबपेज पर होते हैं और आप अनिश्चित होते हैं कि जानकारी नई है या पुरानी?"
+  },
+  "introP2": {
+    "message": "दुर्भाग्य से, बहुत कम वेबसाइटें स्पष्ट रूप से प्रदर्शित करती हैं कि उनकी सामग्री कब प्रकाशित या अपडेट की गई थी।"
+  },
+  "introP3_1": {
+    "message": "पृष्ठ टाइमस्टैम्प खोजक एक पृष्ठ की "
+  },
+  "publishedBold": {
+    "message": "प्रकाशित"
+  },
+  "introP3_2": {
+    "message": " और "
+  },
+  "modifiedBold": {
+    "message": "अंतिम संशोधित"
+  },
+  "introP3_3": {
+    "message": " दोनों तिथियों को ढूंढकर इस समस्या को हल करता है।"
+  },
+  "highlightText": {
+    "message": "सर्वोत्तम अनुभव के लिए, हम आसान पहुंच के लिए इस एक्सटेंशन को आपके टूलबार में पिन करने की सलाह देते हैं।"
+  },
+  "step1Title": {
+    "message": "पृष्ठ टाइमस्टैम्प खोजक को पिन करें"
+  },
+  "step1Desc": {
+    "message": "हमारे एक्सटेंशन के बगल में पिन आइकन पर क्लिक करें।"
+  },
+  "step1Caption": {
+    "message": "पिन करने से आपको त्वरित पहुंच मिलती है।"
+  },
+  "step2Title": {
+    "message": "एक्सटेंशन आइकन पर क्लिक करें"
+  },
+  "step2Desc": {
+    "message": "पृष्ठ के लिए टाइमस्टैम्प खोजने के लिए, बस एक्सटेंशन आइकन पर क्लिक करें।"
+  },
+  "step2Caption": {
+    "message": "दाएं कोने में एक ओवरले में विवरण दिखाई देगा।"
+  },
+  "step3Title": {
+    "message": "अपना अनुभव कस्टमाइज़ करें"
+  },
+  "step3Desc": {
+    "message": "आप 'विकल्प' में अपना पसंदीदा दिनांक और समय प्रारूप सेट कर सकते हैं।"
+  },
+  "howItWorksTitle": {
+    "message": "एक्सटेंशन कैसे काम करता है"
+  },
+  "howItWorksDesc_1": {
+    "message": "हम वेबपेज को "
+  },
+  "howItWorksDesc_2": {
+    "message": " टाइमस्टैम्प के लिए स्कैन करते हैं, सबसे विश्वसनीय स्रोतों को प्राथमिकता देते हैं:"
+  },
+  "logic1Title": {
+    "message": "Schema.org संरचित डेटा"
+  },
+  "logic1Desc_1": {
+    "message": "सबसे पहले, हम किसी भी "
+  },
+  "schemaLinkText": {
+    "message": "Schema.org"
+  },
+  "logic1Desc_2": {
+    "message": " संरचित डेटा का विश्लेषण करते हैं। इसमें "
+  },
+  "logic1Desc_3": {
+    "message": " (या "
+  },
+  "logic1Desc_4": {
+    "message": " ) और "
+  },
+  "logic1Desc_5": {
+    "message": " गुण शामिल हैं।"
+  },
+  "logic2Title": {
+    "message": "मेटा टैग"
+  },
+  "logic2Desc_1": {
+    "message": "इसके बाद, हम मेटा टैग में संकेतक ढूंढते हैं, जैसे "
+  },
+  "logic2Desc_2": {
+    "message": " और "
+  },
+  "ogLinkText": {
+    "message": "ओपन ग्राफ (OG)"
+  },
+  "logic2Desc_3": {
+    "message": " टैग जैसे "
+  },
+  "logic2Desc_4": {
+    "message": " (संशोधित के लिए) और "
+  },
+  "logic2Desc_5": {
+    "message": " (प्रकाशित के लिए)।"
+  },
+  "logic3Title": {
+    "message": "HTML सामग्री पैटर्न"
+  },
+  "logic3Desc_1": {
+    "message": "हम HTML5 "
+  },
+  "logic3Desc_2": {
+    "message": " तत्वों और सामान्य वाक्यांशों या CSS वर्गों (जैसे "
+  },
+  "logic3Desc_3": {
+    "message": " या "
+  },
+  "logic3Desc_4": {
+    "message": ") की खोज करते हैं जो तिथियों को दर्शाते हैं।"
+  },
+  "logic4Title": {
+    "message": "URL पैटर्न"
+  },
+  "logic4Desc_1": {
+    "message": "हम वेबसाइट के पते (URL) को सामान्य दिनांक पैटर्न (जैसे "
+  },
+  "logic4Desc_2": {
+    "message": ") के लिए स्कैन करते हैं।"
+  },
+  "logic5Title": {
+    "message": "Unix टाइमस्टैम्प पार्सिंग"
+  },
+  "logic5Desc": {
+    "message": "10-अंकीय और 13-अंकीय Unix टाइमस्टैम्प के लिए स्कैनिंग का समर्थन करता है।"
+  },
+  "logic6Title": {
+    "message": "HTTP Last-Modified हैडर"
+  },
+  "logic6Desc_1": {
+    "message": "As a final fallback for the "
+  },
+  "modifiedItalic": {
+    "message": "संशोधित"
+  },
+  "logic6Desc_2": {
+    "message": " तिथि के अंतिम विकल्प के रूप में, हम वेब सर्वर द्वारा भेजे गए "
+  },
+  "logic6Desc_3": {
+    "message": " हैडर की जांच करते हैं।"
+  },
+  "notePrefix": {
+    "message": "नोट:"
+  },
+  "noteText": {
+    "message": " हम गलत प्रकाशन तिथियों को रोकने के लिए सिस्टम के 'वर्तमान समय' को अनदेखा करते हैं और भविष्य की तिथियों को अस्वीकार करते हैं।"
+  },
+  "footerText1": {
+    "message": "पृष्ठ टाइमस्टैम्प खोजक • ब्रैंडन स्सिवोलेट द्वारा • "
+  }
+}

@@ -1,0 +1,230 @@
+{
+  "extName": {
+    "message": "Recherche d'Horodatage"
+  },
+  "extDesc": {
+    "message": "Trouve et affiche l'horodatage de publication et de modification d'une page"
+  },
+  "publishedLabel": {
+    "message": "Publié :"
+  },
+  "modifiedLabel": {
+    "message": "Dernière modification :"
+  },
+  "notFound": {
+    "message": "Introuvable"
+  },
+  "noTimestampFound": {
+    "message": "Aucun horodatage fiable"
+  },
+  "sourceSchema": {
+    "message": "Schema.org"
+  },
+  "sourceMeta": {
+    "message": "Balise Meta"
+  },
+  "sourceMetaProp": {
+    "message": "Propriété Meta"
+  },
+  "sourceTimeTag": {
+    "message": "Contenu de la Page (balise time)"
+  },
+  "sourceContent": {
+    "message": "Contenu de la Page"
+  },
+  "sourceUrl": {
+    "message": "Modèle d'URL"
+  },
+  "sourceRegex": {
+    "message": "Scan Regex"
+  },
+  "sourceHttp": {
+    "message": "En-tête HTTP"
+  },
+  "optionsTitle": {
+    "message": "Options de Format"
+  },
+  "dateFormatLabel": {
+    "message": "Format de Date :"
+  },
+  "timeFormatLabel": {
+    "message": "Format d'Heure :"
+  },
+  "saveButton": {
+    "message": "Enregistrer"
+  },
+  "optionsSaved": {
+    "message": "Options enregistrées."
+  },
+  "option24Hour": {
+    "message": "24 heures"
+  },
+  "option12Hour": {
+    "message": "12 heures"
+  },
+  "optionISO": {
+    "message": "AAAA-MM-JJ (ISO)"
+  },
+  "onboardingTitle": {
+    "message": "Bienvenue sur Recherche d'Horodatage"
+  },
+  "onboardingSubtitle": {
+    "message": "Suivez quand les pages web ont été publiées ou mises à jour."
+  },
+  "introTitle": {
+    "message": "Pourquoi nous avons créé cette extension"
+  },
+  "introP1": {
+    "message": "Ne détestez-vous pas être sur une page web sans savoir si l'information est récente ou ancienne ?"
+  },
+  "introP2": {
+    "message": "Malheureusement, peu de sites affichent clairement quand leur contenu a été publié ou mis à jour."
+  },
+  "introP3_1": {
+    "message": "Notre extension résout cela en trouvant à la fois les dates de "
+  },
+  "publishedBold": {
+    "message": "publication"
+  },
+  "introP3_2": {
+    "message": " et de "
+  },
+  "modifiedBold": {
+    "message": "dernière modification"
+  },
+  "introP3_3": {
+    "message": ". Cliquez simplement sur l'icône pour le découvrir."
+  },
+  "highlightText": {
+    "message": "Pour la meilleure expérience, nous recommandons d'épingler cette extension."
+  },
+  "step1Title": {
+    "message": "Épinglez l'extension"
+  },
+  "step1Desc": {
+    "message": "Cliquez sur l'icône en forme d'épingle pour la garder visible."
+  },
+  "step1Caption": {
+    "message": "L'épinglage vous donne un accès rapide."
+  },
+  "step2Title": {
+    "message": "Cliquez sur l'icône"
+  },
+  "step2Desc": {
+    "message": "Pour trouver l'horodatage, cliquez simplement sur l'icône."
+  },
+  "step2Caption": {
+    "message": "Vous verrez les détails dans une superposition."
+  },
+  "step3Title": {
+    "message": "Personnalisez votre expérience"
+  },
+  "step3Desc": {
+    "message": "Vous pouvez définir votre format de date et d'heure préféré dans les 'Options'."
+  },
+  "howItWorksTitle": {
+    "message": "Comment fonctionne l'extension"
+  },
+  "howItWorksDesc_1": {
+    "message": "Nous scannons intelligemment la page web à la recherche d'horodatages "
+  },
+  "howItWorksDesc_2": {
+    "message": ", en priorisant les sources les plus fiables :"
+  },
+  "logic1Title": {
+    "message": "Données Structurées Schema.org"
+  },
+  "logic1Desc_1": {
+    "message": "D'abord, nous analysons les données structurées "
+  },
+  "schemaLinkText": {
+    "message": "Schema.org"
+  },
+  "logic1Desc_2": {
+    "message": " intégrées. Cela contient les propriétés "
+  },
+  "logic1Desc_3": {
+    "message": " (ou "
+  },
+  "logic1Desc_4": {
+    "message": " ) et "
+  },
+  "logic1Desc_5": {
+    "message": " les plus précises."
+  },
+  "logic2Title": {
+    "message": "Balises Meta"
+  },
+  "logic2Desc_1": {
+    "message": "Ensuite, nous cherchons des indicateurs dans les balises meta comme "
+  },
+  "logic2Desc_2": {
+    "message": " ainsi que les balises "
+  },
+  "ogLinkText": {
+    "message": "Open Graph (OG)"
+  },
+  "logic2Desc_3": {
+    "message": " telles que "
+  },
+  "logic2Desc_4": {
+    "message": " (modification) et "
+  },
+  "logic2Desc_5": {
+    "message": " (publication)."
+  },
+  "logic3Title": {
+    "message": "Modèles de Contenu HTML"
+  },
+  "logic3Desc_1": {
+    "message": "Nous cherchons les éléments HTML5 "
+  },
+  "logic3Desc_2": {
+    "message": " et les phrases courantes ou classes CSS (comme "
+  },
+  "logic3Desc_3": {
+    "message": " ou "
+  },
+  "logic3Desc_4": {
+    "message": ") qui indiquent des dates."
+  },
+  "logic4Title": {
+    "message": "Modèles d'URL"
+  },
+  "logic4Desc_1": {
+    "message": "Nous scannons l'adresse du site (URL) pour des modèles de date courants (comme "
+  },
+  "logic4Desc_2": {
+    "message": ")."
+  },
+  "logic5Title": {
+    "message": "Analyse d'Horodatage Unix"
+  },
+  "logic5Desc": {
+    "message": "Prend en charge le balayage des horodatages Unix à 10 et 13 chiffres."
+  },
+  "logic6Title": {
+    "message": "En-tête HTTP Last-Modified"
+  },
+  "logic6Desc_1": {
+    "message": "Comme dernier recours pour la date de "
+  },
+  "modifiedItalic": {
+    "message": "modification"
+  },
+  "logic6Desc_2": {
+    "message": ", nous examinons l'en-tête "
+  },
+  "logic6Desc_3": {
+    "message": " envoyé par le serveur web."
+  },
+  "notePrefix": {
+    "message": "Remarque :"
+  },
+  "noteText": {
+    "message": " Nous ignorons l'heure du système pour éviter les dates incorrectes et rejetons les dates futures."
+  },
+  "footerText1": {
+    "message": "Recherche d'Horodatage • Par Brandon Scivolette • "
+  }
+}

@@ -1,14 +1,19 @@
 // Set up global mocks before importing
 global.chrome = {
-    storage: {
-        sync: {
-            get: jest.fn((defaults, callback) => callback(defaults))
+        runtime: {
+            sendMessage: jest.fn()
+        },
+        storage: {
+            sync: {
+                get: jest.fn((keys, callback) => {
+                    callback({ dateFormat: 'YYYY-MM-DD', timeFormat: '24-hour' });
+                })
+            }
+        },
+        i18n: {
+            getMessage: jest.fn((key) => key) // Mock to simply return the key
         }
-    },
-    runtime: {
-        sendMessage: jest.fn()
-    }
-};
+    };
 
 // jest-environment-jsdom provides global.window and global.document
 

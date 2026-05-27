@@ -1,0 +1,230 @@
+{
+  "extName": {
+    "message": "Buscador de Data e Hora"
+  },
+  "extDesc": {
+    "message": "Encontra e exibe a data de publicação e modificação de uma página"
+  },
+  "publishedLabel": {
+    "message": "Publicado:"
+  },
+  "modifiedLabel": {
+    "message": "Última Modificação:"
+  },
+  "notFound": {
+    "message": "Não encontrado"
+  },
+  "noTimestampFound": {
+    "message": "Nenhuma data confiável encontrada"
+  },
+  "sourceSchema": {
+    "message": "Schema.org"
+  },
+  "sourceMeta": {
+    "message": "Meta Tag"
+  },
+  "sourceMetaProp": {
+    "message": "Propriedade Meta"
+  },
+  "sourceTimeTag": {
+    "message": "Conteúdo da Página (tag time)"
+  },
+  "sourceContent": {
+    "message": "Conteúdo da Página"
+  },
+  "sourceUrl": {
+    "message": "Padrão de URL"
+  },
+  "sourceRegex": {
+    "message": "Varredura Regex"
+  },
+  "sourceHttp": {
+    "message": "Cabeçalho HTTP"
+  },
+  "optionsTitle": {
+    "message": "Opções de Formato"
+  },
+  "dateFormatLabel": {
+    "message": "Formato de Data:"
+  },
+  "timeFormatLabel": {
+    "message": "Formato de Hora:"
+  },
+  "saveButton": {
+    "message": "Salvar"
+  },
+  "optionsSaved": {
+    "message": "Opções salvas."
+  },
+  "option24Hour": {
+    "message": "24 horas"
+  },
+  "option12Hour": {
+    "message": "12 horas"
+  },
+  "optionISO": {
+    "message": "AAAA-MM-DD (ISO)"
+  },
+  "onboardingTitle": {
+    "message": "Bem-vindo ao Buscador de Data e Hora"
+  },
+  "onboardingSubtitle": {
+    "message": "Rastreie quando as páginas web foram publicadas ou atualizadas."
+  },
+  "introTitle": {
+    "message": "Por que construímos esta extensão"
+  },
+  "introP1": {
+    "message": "Não odeia quando está numa página e não tem a certeza se a informação é nova ou velha?"
+  },
+  "introP2": {
+    "message": "Infelizmente, poucos sites exibem claramente quando o seu conteúdo foi publicado ou atualizado."
+  },
+  "introP3_1": {
+    "message": "A nossa extensão resolve isso encontrando as datas de "
+  },
+  "publishedBold": {
+    "message": "publicação"
+  },
+  "introP3_2": {
+    "message": " e "
+  },
+  "modifiedBold": {
+    "message": "última modificação"
+  },
+  "introP3_3": {
+    "message": ". Basta clicar no ícone para descobrir."
+  },
+  "highlightText": {
+    "message": "Para a melhor experiência, recomendamos fixar esta extensão na sua barra de ferramentas."
+  },
+  "step1Title": {
+    "message": "Fixe a extensão"
+  },
+  "step1Desc": {
+    "message": "Clique no ícone de alfinete para mantê-la visível."
+  },
+  "step1Caption": {
+    "message": "Fixar dá-lhe acesso rápido a partir de qualquer página web."
+  },
+  "step2Title": {
+    "message": "Clique no ícone da extensão"
+  },
+  "step2Desc": {
+    "message": "Para encontrar a data de uma página, basta clicar no ícone."
+  },
+  "step2Caption": {
+    "message": "Você verá os detalhes numa sobreposição no canto direito."
+  },
+  "step3Title": {
+    "message": "Personalize a sua experiência"
+  },
+  "step3Desc": {
+    "message": "Você pode definir seu formato de data e hora preferido nas 'Opções'."
+  },
+  "howItWorksTitle": {
+    "message": "Como a Extensão Funciona"
+  },
+  "howItWorksDesc_1": {
+    "message": "Examinamos de forma inteligente a página web em busca de datas "
+  },
+  "howItWorksDesc_2": {
+    "message": ", priorizando as fontes mais confiáveis:"
+  },
+  "logic1Title": {
+    "message": "Dados Estruturados Schema.org"
+  },
+  "logic1Desc_1": {
+    "message": "Primeiro, analisamos os dados "
+  },
+  "schemaLinkText": {
+    "message": "Schema.org"
+  },
+  "logic1Desc_2": {
+    "message": " incorporados na página. Isto contém as propriedades "
+  },
+  "logic1Desc_3": {
+    "message": " (ou "
+  },
+  "logic1Desc_4": {
+    "message": " ) e "
+  },
+  "logic1Desc_5": {
+    "message": " mais precisas."
+  },
+  "logic2Title": {
+    "message": "Meta Tags"
+  },
+  "logic2Desc_1": {
+    "message": "Em seguida, procuramos por indicadores nas meta tags, como "
+  },
+  "logic2Desc_2": {
+    "message": " bem como "
+  },
+  "ogLinkText": {
+    "message": "Open Graph (OG)"
+  },
+  "logic2Desc_3": {
+    "message": " tags como "
+  },
+  "logic2Desc_4": {
+    "message": " (para modificação) e "
+  },
+  "logic2Desc_5": {
+    "message": " (para publicação)."
+  },
+  "logic3Title": {
+    "message": "Padrões de Conteúdo HTML"
+  },
+  "logic3Desc_1": {
+    "message": "Procuramos elementos HTML5 "
+  },
+  "logic3Desc_2": {
+    "message": " e frases comuns ou classes CSS (como "
+  },
+  "logic3Desc_3": {
+    "message": " ou "
+  },
+  "logic3Desc_4": {
+    "message": ") que indicam datas."
+  },
+  "logic4Title": {
+    "message": "Padrões de URL"
+  },
+  "logic4Desc_1": {
+    "message": "Examinamos o endereço do site (URL) para padrões de data comuns (como "
+  },
+  "logic4Desc_2": {
+    "message": ")."
+  },
+  "logic5Title": {
+    "message": "Análise de Unix Timestamp"
+  },
+  "logic5Desc": {
+    "message": "Suporta a varredura de timestamps Unix de 10 e 13 dígitos."
+  },
+  "logic6Title": {
+    "message": "Cabeçalho HTTP Last-Modified"
+  },
+  "logic6Desc_1": {
+    "message": "Como último recurso para a data de "
+  },
+  "modifiedItalic": {
+    "message": "modificação"
+  },
+  "logic6Desc_2": {
+    "message": ", examinamos o cabeçalho "
+  },
+  "logic6Desc_3": {
+    "message": " enviado pelo servidor web."
+  },
+  "notePrefix": {
+    "message": "Nota:"
+  },
+  "noteText": {
+    "message": " Ignoramos o 'tempo atual' do sistema para evitar datas incorretas e rejeitamos datas futuras."
+  },
+  "footerText1": {
+    "message": "Buscador de Data e Hora • Por Brandon Scivolette • "
+  }
+}

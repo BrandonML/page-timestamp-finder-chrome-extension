@@ -1,0 +1,230 @@
+{
+  "extName": {
+    "message": "Buscador de Marcas de Tiempo"
+  },
+  "extDesc": {
+    "message": "Encuentra y muestra la marca de tiempo de publicación y modificación de una página web"
+  },
+  "publishedLabel": {
+    "message": "Publicado:"
+  },
+  "modifiedLabel": {
+    "message": "Última Modificación:"
+  },
+  "notFound": {
+    "message": "No encontrado"
+  },
+  "noTimestampFound": {
+    "message": "No se encontró marca de tiempo"
+  },
+  "sourceSchema": {
+    "message": "Schema.org"
+  },
+  "sourceMeta": {
+    "message": "Etiqueta Meta"
+  },
+  "sourceMetaProp": {
+    "message": "Propiedad Meta"
+  },
+  "sourceTimeTag": {
+    "message": "Contenido de la Página (etiqueta time)"
+  },
+  "sourceContent": {
+    "message": "Contenido de la Página"
+  },
+  "sourceUrl": {
+    "message": "Patrón de URL"
+  },
+  "sourceRegex": {
+    "message": "Escaneo Regex"
+  },
+  "sourceHttp": {
+    "message": "Cabecera HTTP"
+  },
+  "optionsTitle": {
+    "message": "Opciones de Formato"
+  },
+  "dateFormatLabel": {
+    "message": "Formato de Fecha:"
+  },
+  "timeFormatLabel": {
+    "message": "Formato de Hora:"
+  },
+  "saveButton": {
+    "message": "Guardar"
+  },
+  "optionsSaved": {
+    "message": "Opciones guardadas."
+  },
+  "option24Hour": {
+    "message": "24 horas"
+  },
+  "option12Hour": {
+    "message": "12 horas"
+  },
+  "optionISO": {
+    "message": "AAAA-MM-DD (ISO)"
+  },
+  "onboardingTitle": {
+    "message": "Bienvenido a Buscador de Marcas de Tiempo"
+  },
+  "onboardingSubtitle": {
+    "message": "Rastrea cuándo se publicaron o actualizaron las páginas web con esta extensión."
+  },
+  "introTitle": {
+    "message": "Por Qué Creamos Esta Extensión"
+  },
+  "introP1": {
+    "message": "¿No odias cuando estás en una página web y no estás seguro de si la información es nueva o vieja?"
+  },
+  "introP2": {
+    "message": "Lamentablemente, pocos sitios muestran claramente cuándo se publicó o actualizó su contenido."
+  },
+  "introP3_1": {
+    "message": "Buscador de Marcas de Tiempo resuelve esto encontrando tanto la fecha de "
+  },
+  "publishedBold": {
+    "message": "publicación"
+  },
+  "introP3_2": {
+    "message": " como de "
+  },
+  "modifiedBold": {
+    "message": "última modificación"
+  },
+  "introP3_3": {
+    "message": ". Simplemente haz clic en el icono para averiguarlo."
+  },
+  "highlightText": {
+    "message": "Para una mejor experiencia, recomendamos fijar esta extensión en tu barra de herramientas."
+  },
+  "step1Title": {
+    "message": "Fija Buscador de Marcas de Tiempo"
+  },
+  "step1Desc": {
+    "message": "Haz clic en el icono de la chincheta para mantenerlo visible."
+  },
+  "step1Caption": {
+    "message": "Fijar te da acceso rápido desde cualquier página web."
+  },
+  "step2Title": {
+    "message": "Haz clic en el icono de la extensión"
+  },
+  "step2Desc": {
+    "message": "Para encontrar la marca de tiempo, haz clic en el icono. Encuentra fechas de 'publicación' y 'modificación'."
+  },
+  "step2Caption": {
+    "message": "Verás los detalles en una superposición en la esquina derecha."
+  },
+  "step3Title": {
+    "message": "Personaliza tu experiencia"
+  },
+  "step3Desc": {
+    "message": "Puedes configurar tu formato de fecha y hora preferido en 'Opciones'."
+  },
+  "howItWorksTitle": {
+    "message": "Cómo Funciona la Extensión"
+  },
+  "howItWorksDesc_1": {
+    "message": "Escaneamos inteligentemente la página web en busca de marcas de tiempo "
+  },
+  "howItWorksDesc_2": {
+    "message": " , priorizando las fuentes más confiables:"
+  },
+  "logic1Title": {
+    "message": "Datos Estructurados Schema.org"
+  },
+  "logic1Desc_1": {
+    "message": "Primero, analizamos "
+  },
+  "schemaLinkText": {
+    "message": "Schema.org"
+  },
+  "logic1Desc_2": {
+    "message": " datos estructurados incrustados en la página. Esto contiene las propiedades "
+  },
+  "logic1Desc_3": {
+    "message": " (o "
+  },
+  "logic1Desc_4": {
+    "message": " como respaldo) y "
+  },
+  "logic1Desc_5": {
+    "message": " más precisas."
+  },
+  "logic2Title": {
+    "message": "Etiquetas Meta"
+  },
+  "logic2Desc_1": {
+    "message": "Luego, buscamos indicadores en las etiquetas meta, como "
+  },
+  "logic2Desc_2": {
+    "message": " así como etiquetas de "
+  },
+  "ogLinkText": {
+    "message": "Open Graph (OG)"
+  },
+  "logic2Desc_3": {
+    "message": " como "
+  },
+  "logic2Desc_4": {
+    "message": " (modificado) y "
+  },
+  "logic2Desc_5": {
+    "message": " (publicado)."
+  },
+  "logic3Title": {
+    "message": "Patrones de Contenido HTML"
+  },
+  "logic3Desc_1": {
+    "message": "Buscamos elementos HTML5 "
+  },
+  "logic3Desc_2": {
+    "message": " y frases comunes o clases CSS (como "
+  },
+  "logic3Desc_3": {
+    "message": " o "
+  },
+  "logic3Desc_4": {
+    "message": ") que indican fechas."
+  },
+  "logic4Title": {
+    "message": "Patrones de URL"
+  },
+  "logic4Desc_1": {
+    "message": "Escaneamos la dirección del sitio web (URL) para patrones de fecha comunes (como "
+  },
+  "logic4Desc_2": {
+    "message": ")."
+  },
+  "logic5Title": {
+    "message": "Análisis de Timestamp Unix"
+  },
+  "logic5Desc": {
+    "message": "Soporta escaneo de marcas de tiempo Unix de 10 y 13 dígitos."
+  },
+  "logic6Title": {
+    "message": "Cabecera HTTP Last-Modified"
+  },
+  "logic6Desc_1": {
+    "message": "Como último respaldo para la fecha de "
+  },
+  "modifiedItalic": {
+    "message": "modificación"
+  },
+  "logic6Desc_2": {
+    "message": ", examinamos la cabecera "
+  },
+  "logic6Desc_3": {
+    "message": " enviada por el servidor web."
+  },
+  "notePrefix": {
+    "message": "Nota:"
+  },
+  "noteText": {
+    "message": " Ignoramos la 'hora actual' del sistema para evitar fechas incorrectas y rechazamos fechas en el futuro."
+  },
+  "footerText1": {
+    "message": "Buscador de Marcas de Tiempo • Por Brandon Scivolette • "
+  }
+}

@@ -12,6 +12,7 @@ Tired of hunting around for when a webpage was published or last updated? This [
 *   **Intelligent Scanning:** It intelligently scans the webpage, checking meta tags, structured data (JSON-LD), visible content patterns, Unix timestamps, and even HTTP headers to find the most accurate dates.
 *   **Customizable Date/Time Format:** You can choose your preferred date and time format (e.g., YYYY-MM-DD vs. MM/DD/YYYY, 24-hour vs. 12-hour clock) from the options page.
 *   **Simple Interface:** Just click the extension icon to get the timestamps. A clear overlay provides the information without being intrusive.
+*   **Multi-language Support:** The extension is fully localized into 9 languages for a native experience worldwide.
 *   **Secure by Design:** Built with strict DOM sanitization rules to prevent cross-site scripting (XSS) and ensuring that timestamps are fetched and displayed safely.
 
 ## How It Works

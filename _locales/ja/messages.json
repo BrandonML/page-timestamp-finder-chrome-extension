@@ -1,0 +1,230 @@
+{
+  "extName": {
+    "message": "ページタイムスタンプ検索"
+  },
+  "extDesc": {
+    "message": "ウェブページの公開日と更新日を見つけて表示します"
+  },
+  "publishedLabel": {
+    "message": "公開日:"
+  },
+  "modifiedLabel": {
+    "message": "最終更新:"
+  },
+  "notFound": {
+    "message": "見つかりません"
+  },
+  "noTimestampFound": {
+    "message": "信頼できるタイムスタンプなし"
+  },
+  "sourceSchema": {
+    "message": "Schema.org"
+  },
+  "sourceMeta": {
+    "message": "メタタグ"
+  },
+  "sourceMetaProp": {
+    "message": "メタプロパティ"
+  },
+  "sourceTimeTag": {
+    "message": "ページコンテンツ (timeタグ)"
+  },
+  "sourceContent": {
+    "message": "ページコンテンツ"
+  },
+  "sourceUrl": {
+    "message": "URLパターン"
+  },
+  "sourceRegex": {
+    "message": "正規表現スキャン"
+  },
+  "sourceHttp": {
+    "message": "HTTPヘッダー"
+  },
+  "optionsTitle": {
+    "message": "フォーマットのオプション"
+  },
+  "dateFormatLabel": {
+    "message": "日付フォーマット:"
+  },
+  "timeFormatLabel": {
+    "message": "時間フォーマット:"
+  },
+  "saveButton": {
+    "message": "保存"
+  },
+  "optionsSaved": {
+    "message": "オプションを保存しました。"
+  },
+  "option24Hour": {
+    "message": "24時間"
+  },
+  "option12Hour": {
+    "message": "12時間"
+  },
+  "optionISO": {
+    "message": "YYYY-MM-DD (ISO)"
+  },
+  "onboardingTitle": {
+    "message": "ページタイムスタンプ検索へようこそ"
+  },
+  "onboardingSubtitle": {
+    "message": "この拡張機能でウェブページの公開や更新を追跡しましょう。"
+  },
+  "introTitle": {
+    "message": "私たちがこの拡張機能を作った理由"
+  },
+  "introP1": {
+    "message": "ウェブページで情報が新しいか古いかわからないとき、嫌になりませんか？"
+  },
+  "introP2": {
+    "message": "残念ながら、コンテンツの公開や更新時期を明確に表示しているサイトは少数です。"
+  },
+  "introP3_1": {
+    "message": "この拡張機能は、ページの"
+  },
+  "publishedBold": {
+    "message": "公開日"
+  },
+  "introP3_2": {
+    "message": "と"
+  },
+  "modifiedBold": {
+    "message": "最終更新日"
+  },
+  "introP3_3": {
+    "message": "の両方を見つけることでこれを解決します。アイコンをクリックするだけです。"
+  },
+  "highlightText": {
+    "message": "最適な体験のために、この拡張機能をツールバーに固定することをお勧めします。"
+  },
+  "step1Title": {
+    "message": "拡張機能を固定する"
+  },
+  "step1Desc": {
+    "message": "ピンのアイコンをクリックして常に表示させます。"
+  },
+  "step1Caption": {
+    "message": "固定すると、どのウェブページからでも素早くアクセスできます。"
+  },
+  "step2Title": {
+    "message": "拡張機能アイコンをクリック"
+  },
+  "step2Desc": {
+    "message": "ページのタイムスタンプを見つけるには、アイコンをクリックするだけです。"
+  },
+  "step2Caption": {
+    "message": "右隅のオーバーレイに詳細が表示されます。"
+  },
+  "step3Title": {
+    "message": "体験をカスタマイズ"
+  },
+  "step3Desc": {
+    "message": "「オプション」でお好みのフォーマットを設定できます。"
+  },
+  "howItWorksTitle": {
+    "message": "拡張機能の仕組み"
+  },
+  "howItWorksDesc_1": {
+    "message": "最も信頼できる情報源を優先し、ウェブページを"
+  },
+  "howItWorksDesc_2": {
+    "message": "タイムスタンプのためにインテリジェントにスキャンします:"
+  },
+  "logic1Title": {
+    "message": "Schema.org 構造化データ"
+  },
+  "logic1Desc_1": {
+    "message": "まず、埋め込まれた"
+  },
+  "schemaLinkText": {
+    "message": "Schema.org"
+  },
+  "logic1Desc_2": {
+    "message": "構造化データを分析します。これには最も正確な"
+  },
+  "logic1Desc_3": {
+    "message": " (または"
+  },
+  "logic1Desc_4": {
+    "message": " ) と"
+  },
+  "logic1Desc_5": {
+    "message": " プロパティが含まれます。"
+  },
+  "logic2Title": {
+    "message": "メタタグ"
+  },
+  "logic2Desc_1": {
+    "message": "次に、メタタグ内のインジケーターを探します。例えば"
+  },
+  "logic2Desc_2": {
+    "message": " および"
+  },
+  "ogLinkText": {
+    "message": "Open Graph (OG)"
+  },
+  "logic2Desc_3": {
+    "message": " タグの"
+  },
+  "logic2Desc_4": {
+    "message": " (更新) や"
+  },
+  "logic2Desc_5": {
+    "message": " (公開) です。"
+  },
+  "logic3Title": {
+    "message": "HTMLコンテンツパターン"
+  },
+  "logic3Desc_1": {
+    "message": "HTML5の "
+  },
+  "logic3Desc_2": {
+    "message": " 要素や一般的なフレーズ、CSSクラス（"
+  },
+  "logic3Desc_3": {
+    "message": " や"
+  },
+  "logic3Desc_4": {
+    "message": "など）を検索します。"
+  },
+  "logic4Title": {
+    "message": "URLパターン"
+  },
+  "logic4Desc_1": {
+    "message": "ウェブサイトのアドレス (URL) から一般的な日付パターン（"
+  },
+  "logic4Desc_2": {
+    "message": "など）をスキャンします。"
+  },
+  "logic5Title": {
+    "message": "Unixタイムスタンプの解析"
+  },
+  "logic5Desc": {
+    "message": "10桁および13桁のUnixタイムスタンプのスキャンをサポートします。"
+  },
+  "logic6Title": {
+    "message": "HTTP Last-Modified ヘッダー"
+  },
+  "logic6Desc_1": {
+    "message": "As a final fallback for the "
+  },
+  "modifiedItalic": {
+    "message": "更新"
+  },
+  "logic6Desc_2": {
+    "message": "日の最後のフォールバックとして、サーバーが送信する "
+  },
+  "logic6Desc_3": {
+    "message": " ヘッダーを調べます。"
+  },
+  "notePrefix": {
+    "message": "注:"
+  },
+  "noteText": {
+    "message": " 誤った日付を防ぐためシステムの時間は無視し、未来の日付は拒否します。"
+  },
+  "footerText1": {
+    "message": "ページタイムスタンプ検索 • 作成者 Brandon Scivolette • "
+  }
+}

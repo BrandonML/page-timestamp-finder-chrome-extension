@@ -1,0 +1,230 @@
+{
+  "extName": {
+    "message": "页面时间戳查找器"
+  },
+  "extDesc": {
+    "message": "查找并显示网页的发布和修改/更新时间戳"
+  },
+  "publishedLabel": {
+    "message": "发布时间:"
+  },
+  "modifiedLabel": {
+    "message": "最后修改:"
+  },
+  "notFound": {
+    "message": "未找到"
+  },
+  "noTimestampFound": {
+    "message": "未找到可靠的时间戳"
+  },
+  "sourceSchema": {
+    "message": "Schema.org"
+  },
+  "sourceMeta": {
+    "message": "元标签"
+  },
+  "sourceMetaProp": {
+    "message": "元属性"
+  },
+  "sourceTimeTag": {
+    "message": "页面内容 (time标签)"
+  },
+  "sourceContent": {
+    "message": "页面内容"
+  },
+  "sourceUrl": {
+    "message": "URL模式"
+  },
+  "sourceRegex": {
+    "message": "正则扫描"
+  },
+  "sourceHttp": {
+    "message": "HTTP头部"
+  },
+  "optionsTitle": {
+    "message": "时间戳格式选项"
+  },
+  "dateFormatLabel": {
+    "message": "日期格式:"
+  },
+  "timeFormatLabel": {
+    "message": "时间格式:"
+  },
+  "saveButton": {
+    "message": "保存"
+  },
+  "optionsSaved": {
+    "message": "选项已保存。"
+  },
+  "option24Hour": {
+    "message": "24小时制"
+  },
+  "option12Hour": {
+    "message": "12小时制"
+  },
+  "optionISO": {
+    "message": "YYYY-MM-DD (ISO)"
+  },
+  "onboardingTitle": {
+    "message": "欢迎使用页面时间戳查找器"
+  },
+  "onboardingSubtitle": {
+    "message": "使用这个简单而强大的扩展程序，追踪网页的发布或最后更新时间。"
+  },
+  "introTitle": {
+    "message": "我们为什么制作这个扩展程序"
+  },
+  "introP1": {
+    "message": "当您在一个网页上，却不确定信息是新的还是旧的，这不是让人很讨厌吗？"
+  },
+  "introP2": {
+    "message": "遗憾的是，很少有网站清晰地显示其内容的发布或最后更新时间。当您需要知道所看信息是否最新时，这可能会令人沮丧。"
+  },
+  "introP3_1": {
+    "message": "页面时间戳查找器通过查找页面的"
+  },
+  "publishedBold": {
+    "message": "发布"
+  },
+  "introP3_2": {
+    "message": "和"
+  },
+  "modifiedBold": {
+    "message": "最后修改"
+  },
+  "introP3_3": {
+    "message": "时间来解决这个问题。只需点击扩展程序图标即可查明，让您对阅读的内容充满信心。"
+  },
+  "highlightText": {
+    "message": "为了获得最佳体验，我们建议将此扩展程序固定在您的工具栏上，以便快速访问。"
+  },
+  "step1Title": {
+    "message": "将页面时间戳查找器固定到您的工具栏"
+  },
+  "step1Desc": {
+    "message": "点击我们扩展程序旁边的图钉图标，使其始终可见。"
+  },
+  "step1Caption": {
+    "message": "固定后，您可以从任何网页快速访问扩展程序的功能。"
+  },
+  "step2Title": {
+    "message": "点击扩展程序图标"
+  },
+  "step2Desc": {
+    "message": "要查找页面的时间戳，只需点击扩展程序图标。该扩展程序会查找“发布”和“修改”日期。"
+  },
+  "step2Caption": {
+    "message": "当有可用的时间戳时，您会在右上角的叠加层中看到详细信息。"
+  },
+  "step3Title": {
+    "message": "自定义您的体验"
+  },
+  "step3Desc": {
+    "message": "您可以设置首选的日期和时间格式。右键单击扩展程序图标，选择“选项”，然后选择最适合您的格式。"
+  },
+  "howItWorksTitle": {
+    "message": "扩展程序如何工作"
+  },
+  "howItWorksDesc_1": {
+    "message": "我们智能地扫描网页以查找"
+  },
+  "howItWorksDesc_2": {
+    "message": "时间戳，检查可能隐藏日期的各个位置。我们的方法遵循逻辑顺序，优先考虑最可靠的来源："
+  },
+  "logic1Title": {
+    "message": "Schema.org 结构化数据"
+  },
+  "logic1Desc_1": {
+    "message": "首先，我们分析页面中嵌入的任何 "
+  },
+  "schemaLinkText": {
+    "message": "Schema.org"
+  },
+  "logic1Desc_2": {
+    "message": " 结构化数据（JSON-LD 或 microdata 格式）。这通常直接从作者那里包含最准确的 "
+  },
+  "logic1Desc_3": {
+    "message": "（或 "
+  },
+  "logic1Desc_4": {
+    "message": " 作为备用）和 "
+  },
+  "logic1Desc_5": {
+    "message": " 属性。内容经过安全清理，以处理格式错误的控制字符。"
+  },
+  "logic2Title": {
+    "message": "元标签 (Meta Tags)"
+  },
+  "logic2Desc_1": {
+    "message": "接下来，我们在页面的元标签中寻找直接的指示器。这包括标准标签，如 "
+  },
+  "logic2Desc_2": {
+    "message": "，以及 "
+  },
+  "ogLinkText": {
+    "message": "开放图谱 (OG)"
+  },
+  "logic2Desc_3": {
+    "message": " 标签，如 "
+  },
+  "logic2Desc_4": {
+    "message": "（用于修改）和 "
+  },
+  "logic2Desc_5": {
+    "message": "（用于发布）。"
+  },
+  "logic3Title": {
+    "message": "HTML 内容模式"
+  },
+  "logic3Desc_1": {
+    "message": "如果上述检查未产生结果，我们开始查看页面的可见内容。我们搜索 HTML5 "
+  },
+  "logic3Desc_2": {
+    "message": " 元素和通常指示日期的常用短语或 CSS 类（如 "
+  },
+  "logic3Desc_3": {
+    "message": " 或 "
+  },
+  "logic3Desc_4": {
+    "message": "）。"
+  },
+  "logic4Title": {
+    "message": "URL 模式"
+  },
+  "logic4Desc_1": {
+    "message": "如果仍未找到发布日期，我们会扫描网站的地址 (URL) 以寻找博客和新闻网站经常使用的常见日期模式（例如 "
+  },
+  "logic4Desc_2": {
+    "message": "）。"
+  },
+  "logic5Title": {
+    "message": "Unix 时间戳解析"
+  },
+  "logic5Desc": {
+    "message": "支持扫描结构化元素和页面内容中的 10 位（秒）和 13 位（毫秒）Unix 时间戳。"
+  },
+  "logic6Title": {
+    "message": "HTTP Last-Modified 头部"
+  },
+  "logic6Desc_1": {
+    "message": "作为"
+  },
+  "modifiedItalic": {
+    "message": "修改"
+  },
+  "logic6Desc_2": {
+    "message": "日期的最终备用方案，我们检查 Web 服务器发送的 "
+  },
+  "logic6Desc_3": {
+    "message": " 头部。虽然这有时不够精确，但仍然可以提供有用的指示。"
+  },
+  "notePrefix": {
+    "message": "注意："
+  },
+  "noteText": {
+    "message": "我们故意忽略某些通用的服务器头部和系统的“当前时间”，以防止出现错误的发布日期。我们还会拒绝看起来在未来的日期。"
+  },
+  "footerText1": {
+    "message": "页面时间戳查找器 • 由 Brandon Scivolette 开发 • "
+  }
+}
