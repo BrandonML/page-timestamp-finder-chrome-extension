@@ -195,7 +195,7 @@ describe('Priority Hierarchy Validation', () => {
     });
 
     test('processStructuredData correctly handles nested JSON objects', () => {
-        const results = { modified: null, published: null, created: null };
+        const results = { modified: null, published: null, created: null, modifiedType: null, publishedType: null, createdType: null };
         const data = {
             "@context": "https://schema.org",
             "@graph": [
@@ -212,7 +212,58 @@ describe('Priority Hierarchy Validation', () => {
 
         contentModule.processStructuredData(data, results);
         expect(results.published).toBe("2023-01-01T00:00:00Z");
+        expect(results.publishedType).toBe("WebPage");
         expect(results.modified).toBe("2023-01-02T00:00:00Z");
+        expect(results.modifiedType).toBe("Article");
+    });
+
+    test('processStructuredData ignores excluded types and keys (Review, Comment)', () => {
+        const results = { modified: null, published: null, created: null, modifiedType: null, publishedType: null, createdType: null };
+        const data = {
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "datePublished": "2023-01-01T00:00:00Z", // Valid published date
+            "review": {
+                "@type": "Review",
+                "datePublished": "2024-01-01T00:00:00Z" // Should be ignored because of 'review' key
+            },
+            "comments": [
+                {
+                    "@type": "UserComments",
+                    "dateModified": "2024-02-01T00:00:00Z" // Should be ignored because of 'comments' key and UserComments type
+                }
+            ],
+            "nested": {
+                "@type": "Comment",
+                "dateModified": "2024-03-01T00:00:00Z" // Should be ignored because of 'Comment' type
+            }
+        };
+
+        contentModule.processStructuredData(data, results);
+        expect(results.published).toBe("2023-01-01T00:00:00Z");
+        expect(results.publishedType).toBe("Product");
+        expect(results.modified).toBe(null); // The modified dates were all in excluded blocks
+        expect(results.modifiedType).toBe(null);
+    });
+
+    test('processStructuredData correctly attributes nested timestamps to their local @type', () => {
+        const results = { modified: null, published: null, created: null, modifiedType: null, publishedType: null, createdType: null };
+        const data = {
+            "@context": "https://schema.org",
+            "@type": "Organization", // Irrelevant top-level type
+            "name": "Acme Corp",
+            "hasPart": {
+                "@type": "Article",
+                "datePublished": "2023-01-01T00:00:00Z",
+                "dateModified": "2023-01-02T00:00:00Z"
+            }
+        };
+
+        contentModule.processStructuredData(data, results);
+        expect(results.published).toBe("2023-01-01T00:00:00Z");
+        expect(results.publishedType).toBe("Article");
+        expect(results.modified).toBe("2023-01-02T00:00:00Z");
+        expect(results.modifiedType).toBe("Article");
     });
 
     test('findStructuredData uses dateCreated if datePublished is missing', async () => {
