@@ -1,0 +1,230 @@
+{
+  "extName": {
+    "message": "[ar] Page Timestamp Finder"
+  },
+  "extDesc": {
+    "message": "[ar] Finds and displays the published and modified/updated timestamp of a webpage"
+  },
+  "publishedLabel": {
+    "message": "[ar] Published:"
+  },
+  "modifiedLabel": {
+    "message": "[ar] Last Modified:"
+  },
+  "notFound": {
+    "message": "[ar] Not found"
+  },
+  "noTimestampFound": {
+    "message": "[ar] No reliable timestamp found"
+  },
+  "sourceSchema": {
+    "message": "[ar] Schema.org"
+  },
+  "sourceMeta": {
+    "message": "[ar] Meta Tag"
+  },
+  "sourceMetaProp": {
+    "message": "[ar] Meta Property"
+  },
+  "sourceTimeTag": {
+    "message": "[ar] Page Content (time tag)"
+  },
+  "sourceContent": {
+    "message": "[ar] Page Content"
+  },
+  "sourceUrl": {
+    "message": "[ar] URL Pattern"
+  },
+  "sourceRegex": {
+    "message": "[ar] Regex Scan"
+  },
+  "sourceHttp": {
+    "message": "[ar] HTTP Header"
+  },
+  "optionsTitle": {
+    "message": "[ar] Timestamp Format Options"
+  },
+  "dateFormatLabel": {
+    "message": "[ar] Date Format:"
+  },
+  "timeFormatLabel": {
+    "message": "[ar] Time Format:"
+  },
+  "saveButton": {
+    "message": "[ar] Save"
+  },
+  "optionsSaved": {
+    "message": "[ar] Options saved."
+  },
+  "option24Hour": {
+    "message": "[ar] 24-hour"
+  },
+  "option12Hour": {
+    "message": "[ar] 12-hour"
+  },
+  "optionISO": {
+    "message": "[ar] YYYY-MM-DD (ISO)"
+  },
+  "onboardingTitle": {
+    "message": "[ar] Welcome to Page Timestamp Finder"
+  },
+  "onboardingSubtitle": {
+    "message": "[ar] Track when web pages were published or last updated with this simple, powerful extension."
+  },
+  "introTitle": {
+    "message": "[ar] Why We Built This Extension"
+  },
+  "introP1": {
+    "message": "[ar] Don't you hate it when you're on a webpage and you're unsure if the information is new or old?"
+  },
+  "introP2": {
+    "message": "[ar] Sadly, few websites clearly display when their content was published or last updated. This can be frustrating when you need to know if you're looking at current information."
+  },
+  "introP3_1": {
+    "message": "[ar] Page Timestamp Finder solves this problem by finding both the "
+  },
+  "publishedBold": {
+    "message": "[ar] published"
+  },
+  "introP3_2": {
+    "message": "[ar]  and "
+  },
+  "modifiedBold": {
+    "message": "[ar] last modified"
+  },
+  "introP3_3": {
+    "message": "[ar]  dates of a page. Simply click the extension icon to find out, giving you confidence in the content you're reading."
+  },
+  "highlightText": {
+    "message": "[ar] For the best experience, we recommend pinning this extension to your toolbar for easy access."
+  },
+  "step1Title": {
+    "message": "[ar] Pin Page Timestamp Finder to your toolbar"
+  },
+  "step1Desc": {
+    "message": "[ar] Click the pin icon next to our extension to keep it visible at all times."
+  },
+  "step1Caption": {
+    "message": "[ar] Pinning gives you quick access to the extension's features from any webpage."
+  },
+  "step2Title": {
+    "message": "[ar] Click the extension icon"
+  },
+  "step2Desc": {
+    "message": "[ar] To find the timestamp for a page, just click the extension icon. The extension finds both \"published\" and \"modified\" dates."
+  },
+  "step2Caption": {
+    "message": "[ar] When timestamps are available you'll see the details in an overlay in the right corner."
+  },
+  "step3Title": {
+    "message": "[ar] Customize your experience"
+  },
+  "step3Desc": {
+    "message": "[ar] You can set your preferred date and time format. Right-click the extension icon, select \"Options\", and choose the format that works best for you."
+  },
+  "howItWorksTitle": {
+    "message": "[ar] How the Extension Works"
+  },
+  "howItWorksDesc_1": {
+    "message": "[ar] We intelligently scan the webpage for both "
+  },
+  "howItWorksDesc_2": {
+    "message": "[ar]  timestamps, checking various locations where a date might be hiding. Our approach follows a logical sequence, prioritizing the most reliable sources first:"
+  },
+  "logic1Title": {
+    "message": "[ar] Schema.org Structured Data"
+  },
+  "logic1Desc_1": {
+    "message": "[ar] First, we analyze any "
+  },
+  "schemaLinkText": {
+    "message": "[ar] Schema.org"
+  },
+  "logic1Desc_2": {
+    "message": "[ar]  structured data (in JSON-LD or microdata format) embedded in the page. This often contains the most accurate "
+  },
+  "logic1Desc_3": {
+    "message": "[ar]  (or "
+  },
+  "logic1Desc_4": {
+    "message": "[ar]  as a fallback) and "
+  },
+  "logic1Desc_5": {
+    "message": "[ar]  properties directly from the author. Content is securely sanitized to handle malformed control characters."
+  },
+  "logic2Title": {
+    "message": "[ar] Meta Tags"
+  },
+  "logic2Desc_1": {
+    "message": "[ar] Next, we look for direct indicators in the page's meta tags. This includes standard tags like "
+  },
+  "logic2Desc_2": {
+    "message": "[ar]  as well as "
+  },
+  "ogLinkText": {
+    "message": "[ar] Open Graph (OG)"
+  },
+  "logic2Desc_3": {
+    "message": "[ar]  tags like "
+  },
+  "logic2Desc_4": {
+    "message": "[ar]  (for modified) and "
+  },
+  "logic2Desc_5": {
+    "message": "[ar]  (for published)."
+  },
+  "logic3Title": {
+    "message": "[ar] HTML Content Patterns"
+  },
+  "logic3Desc_1": {
+    "message": "[ar] If the above checks don't yield a result, we start looking at the visible content of the page. We search for HTML5 "
+  },
+  "logic3Desc_2": {
+    "message": "[ar]  elements and common phrases or CSS classes (like "
+  },
+  "logic3Desc_3": {
+    "message": "[ar]  or "
+  },
+  "logic3Desc_4": {
+    "message": "[ar] ) that often indicate dates."
+  },
+  "logic4Title": {
+    "message": "[ar] URL Patterns"
+  },
+  "logic4Desc_1": {
+    "message": "[ar] If a publication date still hasn't been found, we scan the website's address (URL) for common date patterns (like "
+  },
+  "logic4Desc_2": {
+    "message": "[ar] ) often used by blogs and news sites."
+  },
+  "logic5Title": {
+    "message": "[ar] Unix Timestamp Parsing"
+  },
+  "logic5Desc": {
+    "message": "[ar] Supports scanning structured elements and page content for both 10-digit (seconds) and 13-digit (milliseconds) Unix timestamps."
+  },
+  "logic6Title": {
+    "message": "[ar] HTTP Last-Modified Header"
+  },
+  "logic6Desc_1": {
+    "message": "[ar] As a final fallback for the "
+  },
+  "modifiedItalic": {
+    "message": "[ar] modified"
+  },
+  "logic6Desc_2": {
+    "message": "[ar]  date, we examine the "
+  },
+  "logic6Desc_3": {
+    "message": "[ar]  header sent by the web server. While this can sometimes be less precise, it can still provide a useful indication."
+  },
+  "notePrefix": {
+    "message": "[ar] Note:"
+  },
+  "noteText": {
+    "message": "[ar]  We deliberately ignore some generic server headers and the system's \"current time\" to prevent incorrect publication dates. We also reject dates that appear to be in the future."
+  },
+  "footerText1": {
+    "message": "[ar] Page Timestamp Finder • By Brandon Scivolette • "
+  }
+}

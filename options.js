@@ -1,3 +1,13 @@
+
+function localizeDOM() {
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+        const message = (typeof chrome !== 'undefined' && chrome.i18n) ? chrome.i18n.getMessage(element.getAttribute('data-i18n')) : null;
+        if (message) {
+            element.textContent = message;
+        }
+    });
+}
+
 // options.js
 
 const dateFormatSelect = document.getElementById('date-format');
@@ -15,7 +25,7 @@ function saveOptions() {
         timeFormat: timeFormat
     }, () => {
         // Update status to let user know options were saved.
-        statusDiv.textContent = 'Options saved.';
+        statusDiv.textContent = (typeof chrome !== 'undefined' && chrome.i18n) ? (chrome.i18n.getMessage('optionsSaved') || 'Options saved.') : 'Options saved.';
         setTimeout(() => {
             statusDiv.textContent = '';
         }, 1500);
@@ -35,5 +45,5 @@ function restoreOptions() {
     });
 }
 
-document.addEventListener('DOMContentLoaded', restoreOptions);
+document.addEventListener('DOMContentLoaded', () => { restoreOptions(); localizeDOM(); });
 saveButton.addEventListener('click', saveOptions);

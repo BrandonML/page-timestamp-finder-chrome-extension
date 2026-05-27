@@ -195,11 +195,11 @@ window.findTimestamps = async function () {
     if (structuredData) {
         if (structuredData.modified) {
             modifiedTimestamp = structuredData.modified;
-            modifiedSource = `Schema.org (${structuredData.type})`;
+            modifiedSource = `${chrome.i18n.getMessage("sourceSchema")} (${structuredData.type})`;
         }
         if (structuredData.published) {
             publishedTimestamp = structuredData.published;
-            publishedSource = `Schema.org (${structuredData.type})`;
+            publishedSource = `${chrome.i18n.getMessage("sourceSchema")} (${structuredData.type})`;
         }
     }
 
@@ -212,18 +212,18 @@ window.findTimestamps = async function () {
 
             if (httpEquiv && httpEquiv.toLowerCase() === 'last-modified' && !modifiedTimestamp) {
                 modifiedTimestamp = meta.getAttribute('content');
-                modifiedSource = 'Meta Tag';
+                modifiedSource = chrome.i18n.getMessage("sourceMeta");
             }
 
             if (property) {
                 const lowerProp = property.toLowerCase();
                 if (!modifiedTimestamp && (lowerProp === 'article:modified_time' || lowerProp === 'og:updated_time')) {
                     modifiedTimestamp = meta.getAttribute('content');
-                    modifiedSource = 'Meta Property';
+                    modifiedSource = chrome.i18n.getMessage("sourceMetaProp");
                 }
                 if (!publishedTimestamp && (lowerProp === 'article:published_time' || lowerProp === 'og:published_time' || lowerProp === 'published_time' || lowerProp === 'publication_date' || lowerProp === 'date' || lowerProp === 'dc.date')) {
                     publishedTimestamp = meta.getAttribute('content');
-                    publishedSource = 'Meta Property';
+                    publishedSource = chrome.i18n.getMessage("sourceMetaProp");
                 }
             }
             if (modifiedTimestamp && publishedTimestamp) break;
@@ -241,14 +241,14 @@ window.findTimestamps = async function () {
 
             if (!modifiedTimestamp && (classList.includes('mod') || classList.includes('update') || textContent.includes('update') || textContent.includes('modifi'))) {
                 modifiedTimestamp = timestamp;
-                modifiedSource = 'Page Content (time tag)';
+                modifiedSource = chrome.i18n.getMessage("sourceTimeTag");
             } else if (!publishedTimestamp && (classList.includes('pub') || textContent.includes('publish') || textContent.includes('post'))) {
                 publishedTimestamp = timestamp;
-                publishedSource = 'Page Content (time tag)';
+                publishedSource = chrome.i18n.getMessage("sourceTimeTag");
             } else if (!publishedTimestamp) {
                 // Default to published if we don't know
                 publishedTimestamp = timestamp;
-                publishedSource = 'Page Content (time tag)';
+                publishedSource = chrome.i18n.getMessage("sourceTimeTag");
             }
             if (modifiedTimestamp && publishedTimestamp) break;
         }
@@ -260,13 +260,13 @@ window.findTimestamps = async function () {
         const modElement = document.querySelector('[itemprop="dateModified"], .post-date, .article-date, .updated, .date-modified');
         if (modElement && !modifiedTimestamp) {
             modifiedTimestamp = modElement.getAttribute('datetime') || modElement.textContent.trim();
-            modifiedSource = 'Page Content';
+            modifiedSource = chrome.i18n.getMessage("sourceContent");
         }
 
         const pubElement = document.querySelector('[itemprop="datePublished"], .publish-date, .timestamp, .date-published');
         if (pubElement && !publishedTimestamp) {
             publishedTimestamp = pubElement.getAttribute('datetime') || pubElement.textContent.trim();
-            publishedSource = 'Page Content';
+            publishedSource = chrome.i18n.getMessage("sourceContent");
         }
 
         // Check URL for dates before full body scan
@@ -277,7 +277,7 @@ window.findTimestamps = async function () {
                 const urlDate = new Date(`${match[1]}-${match[2]}-${match[3]}T00:00:00Z`);
                 if (!isNaN(urlDate) && urlDate <= new Date()) {
                     publishedTimestamp = urlDate.toISOString();
-                    publishedSource = 'URL Pattern';
+                    publishedSource = chrome.i18n.getMessage("sourceUrl");
                 }
             }
         }
@@ -293,10 +293,10 @@ window.findTimestamps = async function () {
                 const isUpdate = match[0].toLowerCase().includes('updat') || match[0].toLowerCase().includes('modif');
                 if (isUpdate && !modifiedTimestamp) {
                     modifiedTimestamp = match[1];
-                    modifiedSource = 'Regex Scan';
+                    modifiedSource = chrome.i18n.getMessage("sourceRegex");
                 } else if (!isUpdate && !publishedTimestamp) {
                     publishedTimestamp = match[1];
-                    publishedSource = 'Regex Scan';
+                    publishedSource = chrome.i18n.getMessage("sourceRegex");
                 }
                 if (modifiedTimestamp && publishedTimestamp) break;
             }
@@ -313,7 +313,7 @@ window.findTimestamps = async function () {
                 const lastModDate = new Date(lastModifiedHeader);
                 if ((now - lastModDate) / (1000 * 60) > 5) { // 5 minute threshold
                     modifiedTimestamp = lastModifiedHeader;
-                    modifiedSource = 'HTTP Header';
+                    modifiedSource = chrome.i18n.getMessage("sourceHttp");
                 }
             }
         } catch (error) {
@@ -339,7 +339,7 @@ async function displayTimestamps(overlayElement, publishedTimestamp, publishedSo
     if (publishedTimestamp || modifiedTimestamp) {
         await displayTimestamp(publishedTimestamp, publishedSource, modifiedTimestamp, modifiedSource, overlayElement, settings);
     } else {
-        overlayElement.textContent = 'No reliable timestamp found';
+        overlayElement.textContent = chrome.i18n.getMessage("noTimestampFound") || "No reliable timestamp found";
         overlayElement.style.backgroundColor = 'rgba(244, 67, 54, 0.9)';
         chrome.runtime.sendMessage({ published: null, modified: null });
         removeOverlay(overlayElement);
@@ -364,16 +364,16 @@ async function displayTimestamp(pubDate, pubSource, modDate, modSource, overlayE
             small.textContent = `(${source})`;
             container.appendChild(small);
         } else {
-            container.appendChild(document.createTextNode('Not found'));
+            container.appendChild(document.createTextNode(chrome.i18n.getMessage("notFound") || "Not found"));
         }
         return container;
     };
 
-    const pubSection = await createSection('Published:', pubDate, pubSource);
+    const pubSection = await createSection(chrome.i18n.getMessage("publishedLabel") || "Published:", pubDate, pubSource);
     overlayElement.appendChild(pubSection);
     overlayElement.appendChild(document.createElement('br'));
 
-    const modSection = await createSection('Last Modified:', modDate, modSource);
+    const modSection = await createSection(chrome.i18n.getMessage("modifiedLabel") || "Last Modified:", modDate, modSource);
     overlayElement.appendChild(modSection);
 
     overlayElement.style.backgroundColor = 'rgba(33, 150, 243, 0.9)';

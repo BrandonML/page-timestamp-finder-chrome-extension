@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Timestamp Finder - Welcome</title>
+    <title data-i18n="extName">Page Timestamp Finder - Welcome</title>
     <style>
         :root {
             --primary: #4f46e5;
@@ -332,19 +332,15 @@
                 <div class="logo">
                     <div class="logo-icon">⏱️</div>
                 </div>
-                <h1>Welcome to Page Timestamp Finder</h1>
-                <p class="subtitle">Track when web pages were published or last updated with this simple, powerful
-                    extension.</p>
+                <h1 data-i18n="onboardingTitle">Welcome to Page Timestamp Finder</h1>
+                <p class="subtitle" data-i18n="onboardingSubtitle">Track when web pages were published or last updated with this simple, powerful extension.</p>
             </div>
 
             <div class="intro-section">
-                <h2>Why We Built This Extension</h2>
-                <p>Don't you hate it when you're on a webpage and you're unsure if the information is new or old?</p>
-                <p>Sadly, few websites clearly display when their content was published or last updated. This can be
-                    frustrating when you need to know if you're looking at current information.</p>
-                <p>Page Timestamp Finder solves this problem by finding both the <b>published</b> and <b>last
-                        modified</b> dates of a page. Simply click the extension icon to find out, giving you confidence
-                    in the content you're reading.</p>
+                <h2 data-i18n="introTitle">Why We Built This Extension</h2>
+                <p data-i18n="introP1">Don't you hate it when you're on a webpage and you're unsure if the information is new or old?</p>
+                <p data-i18n="introP2">Sadly, few websites clearly display when their content was published or last updated. This can be frustrating when you need to know if you're looking at current information.</p>
+                <p><span data-i18n="introP3_1">Page Timestamp Finder solves this problem by finding both the </span><b data-i18n="publishedBold">published</b><span data-i18n="introP3_2"> and </span><b data-i18n="modifiedBold">last modified</b><span data-i18n="introP3_3"> dates of a page. Simply click the extension icon to find out, giving you confidence in the content you're reading.</span></p>
             </div>
 
             <div class="highlight">
@@ -357,7 +353,7 @@
                     </svg>
                 </div>
                 <div class="highlight-text">
-                    For the best experience, we recommend pinning this extension to your toolbar for easy access.
+                    <span data-i18n="highlightText">For the best experience, we recommend pinning this extension to your toolbar for easy access.</span>
                 </div>
             </div>
 
@@ -366,12 +362,11 @@
                 <div class="step">
                     <div class="step-number">1</div>
                     <div class="step-content">
-                        <div class="step-title">Pin Page Timestamp Finder to your toolbar</div>
-                        <p>Click the pin icon next to our extension to keep it visible at all times.</p>
+                        <div class="step-title" data-i18n="step1Title">Pin Page Timestamp Finder to your toolbar</div>
+                        <p data-i18n="step1Desc">Click the pin icon next to our extension to keep it visible at all times.</p>
                         <div class="pin-instruction">
                             <img src="images/pin-extension.png" alt="Pin the extension" class="pin-image">
-                            <div class="pin-caption">Pinning gives you quick access to the extension's features from any
-                                webpage.</div>
+                            <div class="pin-caption" data-i18n="step1Caption">Pinning gives you quick access to the extension's features from any webpage.</div>
                         </div>
                     </div>
                 </div>
@@ -379,13 +374,11 @@
                 <div class="step">
                     <div class="step-number">2</div>
                     <div class="step-content">
-                        <div class="step-title">Click the extension icon</div>
-                        <p>To find the timestamp for a page, just click the extension icon. The extension finds both
-                            "published" and "modified" dates.</p>
+                        <div class="step-title" data-i18n="step2Title">Click the extension icon</div>
+                        <p data-i18n="step2Desc">To find the timestamp for a page, just click the extension icon. The extension finds both "published" and "modified" dates.</p>
                         <div class="pin-instruction">
                             <img src="images/extension-screenshot.png" alt="Click the extension" class="pin-image">
-                            <div class="pin-caption">When timestamps are available you'll see the details in an overlay
-                                in the right corner.</div>
+                            <div class="pin-caption" data-i18n="step2Caption">When timestamps are available you'll see the details in an overlay in the right corner.</div>
                         </div>
                     </div>
                 </div>
@@ -393,9 +386,8 @@
                 <div class="step">
                     <div class="step-number">3</div>
                     <div class="step-content">
-                        <div class="step-title">Customize your experience</div>
-                        <p>You can set your preferred date and time format. Right-click the extension icon, select
-                            "Options", and choose the format that works best for you.</p>
+                        <div class="step-title" data-i18n="step3Title">Customize your experience</div>
+                        <p data-i18n="step3Desc">You can set your preferred date and time format. Right-click the extension icon, select "Options", and choose the format that works best for you.</p>
                         <div class="pin-instruction">
                             <img src="images/date-time-options.png" alt="Extension options for date and time format"
                                 class="pin-image">
@@ -405,90 +397,74 @@
             </div>
 
             <div class="how-it-works">
-                <h2>How the Extension Works</h2>
-                <p>We intelligently scan the webpage for both <b>published</b> and <b>modified</b> timestamps, checking
-                    various locations where a date might be hiding. Our approach follows a logical sequence,
-                    prioritizing the most reliable sources first:</p>
+                <h2 data-i18n="howItWorksTitle">How the Extension Works</h2>
+                <p><span data-i18n="howItWorksDesc_1">We intelligently scan the webpage for both </span><b data-i18n="publishedBold">published</b><span data-i18n="introP3_2"> and </span><b data-i18n="modifiedBold">modified</b><span data-i18n="howItWorksDesc_2"> timestamps, checking various locations where a date might be hiding. Our approach follows a logical sequence, prioritizing the most reliable sources first:</span></p>
 
                 <div class="logic-steps">
                     <div class="logic-step">
                         <div class="logic-number">1</div>
                         <div class="logic-content">
-                            <h3>Schema.org Structured Data</h3>
-                            <p>First, we analyze any <a href="https://schema.org/" target="_blank" rel="noopener noreferrer">Schema.org</a>
-                                structured data (in JSON-LD or microdata format) embedded in the page. This often
-                                contains the most accurate <code>datePublished</code> (or <code>dateCreated</code> as a fallback) and <code>dateModified</code>
-                                properties directly from the author. Content is securely sanitized to handle malformed
-                                control characters.</p>
+                            <h3 data-i18n="logic1Title">Schema.org Structured Data</h3>
+                            <p><span data-i18n="logic1Desc_1">First, we analyze any </span><a href="https://schema.org/" target="_blank" rel="noopener noreferrer" data-i18n="schemaLinkText">Schema.org</a><span data-i18n="logic1Desc_2"> structured data (in JSON-LD or microdata format) embedded in the page. This often contains the most accurate </span><code>datePublished</code><span data-i18n="logic1Desc_3"> (or </span><code>dateCreated</code><span data-i18n="logic1Desc_4"> as a fallback) and </span><code>dateModified</code><span data-i18n="logic1Desc_5"> properties directly from the author. Content is securely sanitized to handle malformed control characters.</span></p>
                         </div>
                     </div>
 
                     <div class="logic-step">
                         <div class="logic-number">2</div>
                         <div class="logic-content">
-                            <h3>Meta Tags</h3>
-                            <p>Next, we look for direct indicators in the page's meta tags. This includes standard tags
-                                like <code>last-modified</code> as well as <a href="https://ogp.me/"
-                                    target="_blank" rel="noopener noreferrer">Open Graph (OG)</a> tags like <code>og:updated_time</code> (for
-                                modified) and <code>og:published_time</code> (for published).</p>
+                            <h3 data-i18n="logic2Title">Meta Tags</h3>
+                            <p><span data-i18n="logic2Desc_1">Next, we look for direct indicators in the page's meta tags. This includes standard tags like </span><code>last-modified</code><span data-i18n="logic2Desc_2"> as well as </span><a href="https://ogp.me/" target="_blank" rel="noopener noreferrer" data-i18n="ogLinkText">Open Graph (OG)</a><span data-i18n="logic2Desc_3"> tags like </span><code>og:updated_time</code><span data-i18n="logic2Desc_4"> (for modified) and </span><code>og:published_time</code><span data-i18n="logic2Desc_5"> (for published).</span></p>
                         </div>
                     </div>
 
                     <div class="logic-step">
                         <div class="logic-number">3</div>
                         <div class="logic-content">
-                            <h3>HTML Content Patterns</h3>
-                            <p>If the above checks don't yield a result, we start looking at the visible content of the
-                                page. We search for HTML5 <code>&lt;time&gt;</code> elements and common phrases or CSS
-                                classes (like <code>.post-date</code> or <code>.updated</code>) that often indicate
-                                dates.</p>
+                            <h3 data-i18n="logic3Title">HTML Content Patterns</h3>
+                            <p><span data-i18n="logic3Desc_1">If the above checks don't yield a result, we start looking at the visible content of the page. We search for HTML5 </span><code>&lt;time&gt;</code><span data-i18n="logic3Desc_2"> elements and common phrases or CSS classes (like </span><code>.post-date</code><span data-i18n="logic3Desc_3"> or </span><code>.updated</code><span data-i18n="logic3Desc_4">) that often indicate dates.</span></p>
                         </div>
                     </div>
 
                     <div class="logic-step">
                         <div class="logic-number">4</div>
                         <div class="logic-content">
-                            <h3>URL Patterns</h3>
-                            <p>If a publication date still hasn't been found, we scan the website's address (URL) for
-                                common date patterns (like <code>/2023/10/15/</code>) often used by blogs and news
-                                sites.</p>
+                            <h3 data-i18n="logic4Title">URL Patterns</h3>
+                            <p><span data-i18n="logic4Desc_1">If a publication date still hasn't been found, we scan the website's address (URL) for common date patterns (like </span><code>/2023/10/15/</code><span data-i18n="logic4Desc_2">) often used by blogs and news sites.</span></p>
                         </div>
                     </div>
 
                     <div class="logic-step">
                         <div class="logic-number">5</div>
                         <div class="logic-content">
-                            <h3>Unix Timestamp Parsing</h3>
-                            <p>Supports scanning structured elements and page content for both 10-digit (seconds) and
-                                13-digit (milliseconds) Unix timestamps.</p>
+                            <h3 data-i18n="logic5Title">Unix Timestamp Parsing</h3>
+                            <p data-i18n="logic5Desc">Supports scanning structured elements and page content for both 10-digit (seconds) and 13-digit (milliseconds) Unix timestamps.</p>
                         </div>
                     </div>
 
                     <div class="logic-step">
                         <div class="logic-number">6</div>
                         <div class="logic-content">
-                            <h3>HTTP <code>Last-Modified</code> Header</h3>
-                            <p>As a final fallback for the <em>modified</em> date, we examine the
-                                <code>Last-Modified</code> header sent by the web server. While this can sometimes be
-                                less precise, it can still provide a useful indication.</p>
+                            <h3><span data-i18n="logic6Title">HTTP Last-Modified Header</span></h3>
+                            <p><span data-i18n="logic6Desc_1">As a final fallback for the </span><em data-i18n="modifiedItalic">modified</em><span data-i18n="logic6Desc_2"> date, we examine the </span><code>Last-Modified</code><span data-i18n="logic6Desc_3"> header sent by the web server. While this can sometimes be less precise, it can still provide a useful indication.</span></p>
                         </div>
                     </div>
                 </div>
 
                 <div class="note">
-                    <p><strong>Note:</strong> We deliberately ignore some generic server headers and the system's "current time" to prevent incorrect publication dates. We also reject dates that appear to be in the future.</p>
+                    <p><strong data-i18n="notePrefix">Note:</strong><span data-i18n="noteText"> We deliberately ignore some generic server headers and the system's "current time" to prevent incorrect publication dates. We also reject dates that appear to be in the future.</span></p>
                 </div>
             </div>
         </div>
 
         <div class="footer">
-            Page Timestamp Finder • By Brandon Scivolette • <a href="https://github.com/BrandonML?tab=repositories"
+            <span data-i18n="footerText1">Page Timestamp Finder • By Brandon Scivolette • </span> <a href="https://github.com/BrandonML?tab=repositories"
                 target="_blank" rel="noopener noreferrer" class="github-link">GitHub</a> • <a
                 href="https://gitlab.com/BrandonML" target="_blank" rel="noopener noreferrer"
                 class="gitlab-link">GitLab</a> • <a href="https://www.facebook.com/scivolette" target="_blank"
                 rel="noopener noreferrer" class="gitlab-link">Facebook</a>
         </div>
     </div>
+    <script src="onboarding.js"></script>
 </body>
 
 </html>

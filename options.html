@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Timestamp Finder Options</title>
+    <title data-i18n="extName">Page Timestamp Finder Options</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -45,26 +45,26 @@
     </style>
 </head>
 <body>
-    <h1>Timestamp Format Options</h1>
+    <h1 data-i18n="optionsTitle">Timestamp Format Options</h1>
 
     <div class="option-group">
-        <label for="date-format">Date Format:</label>
+        <label for="date-format" data-i18n="dateFormatLabel">Date Format:</label>
         <select id="date-format">
-            <option value="YYYY-MM-DD">YYYY-MM-DD (ISO)</option>
+            <option value="YYYY-MM-DD" data-i18n="optionISO">YYYY-MM-DD (ISO)</option>
             <option value="DD/MM/YYYY">DD/MM/YYYY</option>
             <option value="MM/DD/YYYY">MM/DD/YYYY</option>
         </select>
     </div>
 
     <div class="option-group">
-        <label for="time-format">Time Format:</label>
+        <label for="time-format" data-i18n="timeFormatLabel">Time Format:</label>
         <select id="time-format">
-            <option value="24-hour">24-hour</option>
-            <option value="12-hour">12-hour</option>
+            <option value="24-hour" data-i18n="option24Hour">24-hour</option>
+            <option value="12-hour" data-i18n="option12Hour">12-hour</option>
         </select>
     </div>
 
-    <button id="save-button">Save</button>
+    <button id="save-button" data-i18n="saveButton">Save</button>
     <div id="status"></div>
 
     <script src="options.js"></script>
