@@ -139,7 +139,7 @@ function processStructuredData(data, results, parentType = null) {
     if (data['@type']) {
         currentType = Array.isArray(data['@type']) ? data['@type'][0] : data['@type'];
         const typeLower = typeof currentType === 'string' ? currentType.toLowerCase() : '';
-        if (['review', 'userreview', 'comment', 'usercomments'].includes(typeLower)) {
+        if (parentType !== null && ['review', 'userreview', 'comment', 'usercomments'].includes(typeLower)) {
             return;
         }
     }
