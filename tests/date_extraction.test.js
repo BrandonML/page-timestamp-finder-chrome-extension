@@ -282,6 +282,40 @@ describe('Priority Hierarchy Validation', () => {
         expect(results.modifiedType).toBe("Article");
     });
 
+    test('processStructuredData allows top-level Review schemas', () => {
+        const results = { modified: null, published: null, created: null, modifiedType: null, publishedType: null, createdType: null };
+        const data = {
+            "@context": "https://schema.org/",
+            "@type": "Review",
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://loungenerd.com/reviews/lounge-review-plaza-premium-first-terminal-d-dfw"
+            },
+            "itemReviewed": {
+                "@type": "LocalBusiness",
+                "name": "Plaza Premium First Lounge (DFW) Terminal D",
+                "image": [
+                    "https://loungenerd.com/assets/2026/plaza-premium-first-dallas-bar-seating-tables-sign.jpg"
+                ]
+            },
+            "author": {
+                "@type": "Person",
+                "name": "Matthew Justice",
+                "url": "https://loungenerd.com/authors/#matthew-justice"
+            },
+            "datePublished": "2026-06-14T13:34:34Z",
+            "reviewBody": "Plaza Premium First Lounge DFW (Terminal D) review and ratings, featuring à la carte table dining, premium beverages, prayer room, showers, and more.",
+            "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": 4.4
+            }
+        };
+
+        contentModule.processStructuredData(data, results);
+        expect(results.published).toBe("2026-06-14T13:34:34Z");
+        expect(results.publishedType).toBe("Review");
+    });
+
     test('findStructuredData uses dateCreated if datePublished is missing', async () => {
         document.head.innerHTML = `
             <script type="application/ld+json">
