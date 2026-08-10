@@ -378,8 +378,8 @@ async function displayTimestamps(overlayElement, publishedTimestamp, publishedSo
         overlayElement.textContent = chrome.i18n.getMessage("noTimestampFound") || "No reliable timestamp found";
         overlayElement.style.backgroundColor = 'rgba(244, 67, 54, 0.9)';
         chrome.runtime.sendMessage({ published: null, modified: null });
-        removeOverlay(overlayElement);
     }
+    removeOverlay(overlayElement);
 }
 
 async function displayTimestamp(pubDate, pubSource, modDate, modSource, overlayElement, settings = null) {
@@ -414,8 +414,6 @@ async function displayTimestamp(pubDate, pubSource, modDate, modSource, overlayE
 
     overlayElement.style.backgroundColor = 'rgba(33, 150, 243, 0.9)';
     chrome.runtime.sendMessage({ published: pubDate, modified: modDate });
-
-    removeOverlay(overlayElement);
 }
 
 if (typeof module !== 'undefined' && module.exports) {
