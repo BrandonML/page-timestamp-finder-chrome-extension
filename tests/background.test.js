@@ -34,10 +34,41 @@ const bgScriptContent = fs.readFileSync(path.resolve(__dirname, '../background.j
 // so we'll construct a function that returns the required inner functions.
 const getBackgroundFunctions = new Function('chrome', `
     ${bgScriptContent}
-    return { updateNoTimestampState, updateTimestampState };
+    return { updateNoTimestampState, updateTimestampState, sanitizeUrl };
 `);
 
-const { updateNoTimestampState, updateTimestampState } = getBackgroundFunctions(global.chrome);
+const { updateNoTimestampState, updateTimestampState, sanitizeUrl } = getBackgroundFunctions(global.chrome);
+
+describe('sanitizeUrl', () => {
+    test('returns origin + pathname for standard URLs', () => {
+        expect(sanitizeUrl('https://example.com')).toBe('https://example.com/');
+        expect(sanitizeUrl('https://example.com/path/to/page')).toBe('https://example.com/path/to/page');
+        expect(sanitizeUrl('http://localhost:3000/api')).toBe('http://localhost:3000/api');
+    });
+
+    test('strips query parameters', () => {
+        expect(sanitizeUrl('https://example.com/path?foo=bar&baz=1')).toBe('https://example.com/path');
+    });
+
+    test('strips hash fragments', () => {
+        expect(sanitizeUrl('https://example.com/path#section-1')).toBe('https://example.com/path');
+    });
+
+    test('strips both query parameters and hash fragments', () => {
+        expect(sanitizeUrl('https://example.com/path?foo=bar#section-1')).toBe('https://example.com/path');
+    });
+
+    test('returns "invalid-url" for badly formatted strings', () => {
+        expect(sanitizeUrl('not-a-url')).toBe('invalid-url');
+        expect(sanitizeUrl('http://')).toBe('invalid-url');
+    });
+
+    test('returns falsy values as-is', () => {
+        expect(sanitizeUrl(null)).toBe(null);
+        expect(sanitizeUrl(undefined)).toBe(undefined);
+        expect(sanitizeUrl('')).toBe('');
+    });
+});
 
 describe('Background Script UI State Logic', () => {
     beforeEach(() => {
