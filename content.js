@@ -249,13 +249,36 @@ window.findTimestamps = async function () {
         for (const timeElement of timeElements) {
             const timestamp = timeElement.getAttribute('datetime') || timeElement.textContent.trim();
             // Try to figure out if it's published or modified based on class or text
-            const classList = timeElement.className.toLowerCase();
-            const textContent = timeElement.parentElement?.textContent.toLowerCase() || "";
+            const className = typeof timeElement.className === 'string' ? timeElement.className : (timeElement.getAttribute('class') || '');
+            const classList = className.toLowerCase();
 
-            if (!modifiedTimestamp && (classList.includes('mod') || classList.includes('update') || textContent.includes('update') || textContent.includes('modifi'))) {
+            let isMod = false;
+            let isPub = false;
+
+            if (!modifiedTimestamp && (classList.includes('mod') || classList.includes('update'))) {
+                isMod = true;
+            }
+
+            if (!publishedTimestamp && !isMod && classList.includes('pub')) {
+                isPub = true;
+            }
+
+            // Only access and lowercase parent textContent if necessary
+            if (!isMod && !isPub && (!modifiedTimestamp || !publishedTimestamp)) {
+                const parentElement = timeElement.parentElement;
+                const textContent = parentElement ? (parentElement.textContent || "").toLowerCase() : "";
+
+                if (!modifiedTimestamp && (textContent.includes('update') || textContent.includes('modifi'))) {
+                    isMod = true;
+                } else if (!publishedTimestamp && (textContent.includes('publish') || textContent.includes('post'))) {
+                    isPub = true;
+                }
+            }
+
+            if (isMod) {
                 modifiedTimestamp = timestamp;
                 modifiedSource = chrome.i18n.getMessage("sourceTimeTag");
-            } else if (!publishedTimestamp && (classList.includes('pub') || textContent.includes('publish') || textContent.includes('post'))) {
+            } else if (isPub) {
                 publishedTimestamp = timestamp;
                 publishedSource = chrome.i18n.getMessage("sourceTimeTag");
             } else if (!publishedTimestamp) {
