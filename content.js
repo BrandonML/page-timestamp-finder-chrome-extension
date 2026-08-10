@@ -139,7 +139,7 @@ function processStructuredData(data, results, parentType = null) {
     if (data['@type']) {
         currentType = Array.isArray(data['@type']) ? data['@type'][0] : data['@type'];
         const typeLower = typeof currentType === 'string' ? currentType.toLowerCase() : '';
-        if (parentType !== null && ['review', 'userreview', 'comment', 'usercomments'].includes(typeLower)) {
+        if (parentType !== null && (typeLower === 'review' || typeLower === 'userreview' || typeLower === 'comment' || typeLower === 'usercomments')) {
             return;
         }
     }
@@ -159,7 +159,7 @@ function processStructuredData(data, results, parentType = null) {
 
     for (const key in data) {
         const keyLower = key.toLowerCase();
-        if (['review', 'reviews', 'comment', 'comments'].includes(keyLower)) {
+        if (keyLower === 'review' || keyLower === 'reviews' || keyLower === 'comment' || keyLower === 'comments') {
             continue;
         }
 
