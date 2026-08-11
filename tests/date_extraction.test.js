@@ -422,4 +422,121 @@ newline",
             })
         );
     });
+
+    test('findStructuredData extracts uploadDate from VideoObject when standard dates are missing', async () => {
+        document.head.innerHTML = `
+            <script type="application/ld+json">
+                {
+                    "@context": "https://schema.org",
+                    "@graph": [
+                        {
+                            "@type": "WebPage",
+                            "name": "No Date Page"
+                        },
+                        {
+                            "@type": "VideoObject",
+                            "name": "Cool Video",
+                            "uploadDate": "2024-10-31T08:00:00Z"
+                        }
+                    ]
+                }
+            </script>
+        `;
+
+        await window.findTimestamps();
+
+        expect(global.chrome.runtime.sendMessage).toHaveBeenCalledWith(
+            expect.objectContaining({
+                published: "2024-10-31T08:00:00Z",
+                modified: null
+            })
+        );
+    });
+
+    test('findStructuredData prioritizes mainEntity VideoObject over regular VideoObject', async () => {
+        document.head.innerHTML = `
+            <script type="application/ld+json">
+                {
+                    "@context": "https://schema.org",
+                    "@type": "WebPage",
+                    "mainEntity": {
+                        "@type": "VideoObject",
+                        "name": "Main Video",
+                        "uploadDate": "2024-11-01T08:00:00Z"
+                    },
+                    "video": {
+                        "@type": "VideoObject",
+                        "name": "Side Video",
+                        "uploadDate": "2024-10-01T08:00:00Z"
+                    }
+                }
+            </script>
+        `;
+
+        await window.findTimestamps();
+
+        expect(global.chrome.runtime.sendMessage).toHaveBeenCalledWith(
+            expect.objectContaining({
+                published: "2024-11-01T08:00:00Z",
+                modified: null
+            })
+        );
+    });
+
+    test('findStructuredData prioritizes VideoObject over AudioObject', async () => {
+        document.head.innerHTML = `
+            <script type="application/ld+json">
+                {
+                    "@context": "https://schema.org",
+                    "@type": "WebPage",
+                    "mainEntity": {
+                        "@type": "AudioObject",
+                        "name": "Main Audio",
+                        "uploadDate": "2024-12-01T08:00:00Z"
+                    },
+                    "video": {
+                        "@type": "VideoObject",
+                        "name": "Regular Video",
+                        "uploadDate": "2024-09-01T08:00:00Z"
+                    }
+                }
+            </script>
+        `;
+
+        await window.findTimestamps();
+
+        expect(global.chrome.runtime.sendMessage).toHaveBeenCalledWith(
+            expect.objectContaining({
+                published: "2024-09-01T08:00:00Z",
+                modified: null
+            })
+        );
+    });
+
+    test('findStructuredData discards invalid standard dates and falls back to MediaObject', async () => {
+        document.head.innerHTML = `
+            <script type="application/ld+json">
+                {
+                    "@context": "https://schema.org",
+                    "@type": "Article",
+                    "datePublished": "Invalid Date Format",
+                    "dateModified": "Another Invalid Date",
+                    "video": {
+                        "@type": "VideoObject",
+                        "name": "Fallback Video",
+                        "uploadDate": "2024-08-15T12:00:00Z"
+                    }
+                }
+            </script>
+        `;
+
+        await window.findTimestamps();
+
+        expect(global.chrome.runtime.sendMessage).toHaveBeenCalledWith(
+            expect.objectContaining({
+                published: "2024-08-15T12:00:00Z",
+                modified: "Another Invalid Date"
+            })
+        );
+    });
 });
