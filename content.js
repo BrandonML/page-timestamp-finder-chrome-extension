@@ -107,29 +107,84 @@ async function formatDate(dateString, preFetchedSettings = null) {
 
 function findStructuredData() {
     const scripts = document.querySelectorAll('script[type="application/ld+json"]');
-    let results = { modified: null, published: null, created: null, modifiedType: null, publishedType: null, createdType: null };
+    let results = { modified: null, published: null, created: null, modifiedType: null, publishedType: null, createdType: null, mediaObjects: [] };
+
     for (const script of scripts) {
         try {
-            // Sanitize script content by replacing unescaped control characters (ASCII 0-31) with spaces
-            // This prevents JSON.parse from failing on things like literal newlines in strings.
             const sanitizedContent = script.textContent.replace(/[\u0000-\u001F]/g, ' ');
             const data = JSON.parse(sanitizedContent);
             processStructuredData(data, results);
-            if (results.modified && (results.published || results.created)) break;
         } catch (e) {
             console.error('Error parsing structured data:', e);
         }
     }
-    if (!results.published && results.created) {
-        results.published = results.created;
+
+    let finalResults = { modified: null, published: null, modifiedType: null, publishedType: null };
+
+    if (results.modified) {
+        if (findDate(results.modified)) {
+            finalResults.modified = results.modified;
+            finalResults.modifiedType = results.modifiedType;
+        } else {
+            finalResults.modified = results.modified;
+            finalResults.modifiedType = results.modifiedType;
+        }
     }
-    return results.modified || results.published ? results : null;
+
+    let candidatePublished = results.published;
+    let candidatePublishedType = results.publishedType;
+
+    if (candidatePublished && !findDate(candidatePublished)) {
+        candidatePublished = null;
+        candidatePublishedType = null;
+    }
+
+    if (!candidatePublished) {
+        if (results.created) {
+            candidatePublished = results.created;
+            candidatePublishedType = results.createdType;
+        }
+    }
+
+    if (!candidatePublished && results.mediaObjects.length > 0) {
+        let bestMediaDate = null;
+        let bestMediaType = null;
+        let bestPriority = -1; // 3: mainVideo, 2: video, 1: mainAudio, 0: audio
+
+        for (const media of results.mediaObjects) {
+            if (media.uploadDate && findDate(media.uploadDate)) {
+                let priority = -1;
+                const typeLower = typeof media.type === 'string' ? media.type.toLowerCase() : '';
+                if (typeLower === 'videoobject') {
+                    priority = media.isMainEntity ? 3 : 2;
+                } else if (typeLower === 'audioobject') {
+                    priority = media.isMainEntity ? 1 : 0;
+                }
+
+                if (priority > bestPriority) {
+                    bestPriority = priority;
+                    bestMediaDate = media.uploadDate;
+                    bestMediaType = media.type;
+                }
+            }
+        }
+
+        if (bestMediaDate) {
+            candidatePublished = bestMediaDate;
+            candidatePublishedType = bestMediaType;
+        }
+    }
+
+    finalResults.published = candidatePublished;
+    finalResults.publishedType = candidatePublishedType;
+
+    return finalResults.modified || finalResults.published ? finalResults : null;
 }
 
-function processStructuredData(data, results, parentType = null) {
+function processStructuredData(data, results, parentType = null, parentKey = null) {
     if (Array.isArray(data)) {
         for (const item of data) {
-            processStructuredData(item, results, parentType);
+            processStructuredData(item, results, parentType, parentKey);
         }
         return;
     }
@@ -141,6 +196,17 @@ function processStructuredData(data, results, parentType = null) {
         const typeLower = typeof currentType === 'string' ? currentType.toLowerCase() : '';
         if (parentType !== null && (typeLower === 'review' || typeLower === 'userreview' || typeLower === 'comment' || typeLower === 'usercomments')) {
             return;
+        }
+
+        if (typeLower === 'videoobject' || typeLower === 'audioobject') {
+            if (data.uploadDate) {
+                results.mediaObjects = results.mediaObjects || [];
+                results.mediaObjects.push({
+                    type: currentType,
+                    uploadDate: data.uploadDate,
+                    isMainEntity: (parentKey && parentKey.toLowerCase() === 'mainentity') ? true : false
+                });
+            }
         }
     }
 
@@ -164,7 +230,7 @@ function processStructuredData(data, results, parentType = null) {
         }
 
         if (typeof data[key] === 'object' && data[key] !== null) {
-            processStructuredData(data[key], results, currentType);
+            processStructuredData(data[key], results, currentType, key);
         }
     }
 }
